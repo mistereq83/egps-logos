@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EGPS Logo V2 — Batch 1 (Variants 1–10)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:wght@400;700;900&family=Outfit:wght@300;400;600;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-page: #0e0e10;
+  --bg-card-dark: #141416;
+  --bg-card-light: #f0ede8;
+  --text-muted: #888;
+  --accent-copper: #c87941;
+  --accent-gold: #d4a853;
+  --border: #222;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg-page);
+  color:#eee;
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  min-height:100vh;
+  padding:2rem 1.5rem 4rem;
+}
+header{
+  max-width:1200px;margin:0 auto 3rem;
+  border-bottom:1px solid var(--border);
+  padding-bottom:2rem;
+}
+header h1{
+  font-family:'Outfit',sans-serif;
+  font-weight:900;font-size:clamp(1.8rem,4vw,3rem);
+  letter-spacing:-.03em;
+  background:linear-gradient(135deg,#fff 40%,var(--accent-copper));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+header p{color:var(--text-muted);margin-top:.5rem;font-size:.95rem;max-width:600px;line-height:1.5}
+
+.grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;gap:2.5rem;
+}
+.variant{
+  opacity:0;transform:translateY(24px);
+  animation:fadeUp .6s ease forwards;
+}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+
+.variant-header{
+  display:flex;align-items:baseline;gap:.75rem;
+  margin-bottom:1rem;
+}
+.variant-num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.75rem;color:var(--accent-copper);
+  background:#1a1510;border:1px solid #2a1f15;
+  padding:.15rem .5rem;border-radius:3px;
+  letter-spacing:.05em;
+}
+.variant-name{font-weight:700;font-size:1.1rem;letter-spacing:-.01em}
+.variant-desc{color:var(--text-muted);font-size:.8rem;margin-left:auto}
+
+.logo-row{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  border-radius:8px;overflow:hidden;
+  border:1px solid var(--border);
+}
+.logo-cell{
+  display:flex;align-items:center;justify-content:center;
+  padding:2.5rem 2rem;min-height:180px;
+}
+.logo-cell.dark{background:var(--bg-card-dark)}
+.logo-cell.light{background:var(--bg-card-light)}
+.logo-cell svg{max-width:340px;width:100%;height:auto}
+
+@media(max-width:600px){
+  .logo-row{grid-template-columns:1fr}
+  .variant-header{flex-wrap:wrap}
+  .variant-desc{margin-left:0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>EGPS Logos V2 — Batch 1</h1>
+  <p>Euro Gulf Power Solutions — 10 distinct identity directions. Styles 1–10: Sharp Mono through Retro-Industrial.</p>
+</header>
+
+<div class="grid">
+
+<!-- ============================================ -->
+<!-- VARIANT 1: Sharp Mono -->
+<!-- ============================================ -->
+<div class="variant" style="animation-delay:.1s">
+  <div class="variant-header">
+    <span class="variant-num">01</span>
+    <span class="variant-name">Sharp Mono</span>
+    <span class="variant-desc">Ultra-clean condensed sans, high contrast B&W, reads at 16px</span>
+  </div>
+  <div class="logo-row">
+    <div class="logo-cell dark">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <style>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800');</style>
+        </defs>
+        <text x="200" y="58" text-anchor="middle" font-family="Outfit" font-weight="800" font-size="52" fill="#fff" letter-spacing="8">EGPS</text>
+        <line x1="60" y1="72" x2="340" y2="72" stroke="#fff" stroke-width=".5" opacity=".3"/>
+        <text x="200" y="92" text-anchor="middle" font-family="Outfit" font-weight="400" font-size="11" fill="#999" letter-spacing="6">EURO GULF POWER SOLUTIONS</text>
+      </svg>
+    </div>
+    <div class="logo-cell light">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="200" y="58" text-anchor="middle" font-family="Outfit" font-weight="800" font-size="52" fill="#111" letter-spacing="8">EGPS</text>
+        <line x1="60" y1="72" x2="340" y2="72" stroke="#111" stroke-width=".5" opacity=".15"/>
+        <text x="200" y="92" text-anchor="middle" font-family="Outfit" font-weight="400" font-size="11" fill="#666" letter-spacing="6">EURO GULF POWER SOLUTIONS</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- VARIANT 2: Warm Industrial -->
+<!-- ============================================ -->
+<div class="variant" style="animation-delay:.2s">
+  <div class="variant-header">
+    <span class="variant-num">02</span>
+    <span class="variant-name">Warm Industrial</span>
+    <span class="variant-desc">Rounded geometric type, warm grey + copper, humanized minimalism</span>
+  </div>
+  <div class="logo-row">
+    <div class="logo-cell dark">
+      <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="copper2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#d4956b"/>
+            <stop offset="100%" stop-color="#a86840"/>
+          </linearGradient>
+        </defs>
+        <text x="200" y="52" text-anchor="middle" font-family="DM Sans,sans-serif" font-weight="700" font-size="38" fill="#e8e0d6" letter-spacing="3">Euro Gulf</text>
+        <rect x="80" y="64" width="240" height="2" rx="1" fill="url(#copper2)" opacity=".6"/>
+        <text x="200" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-weight="500" font-size="13" fill="url(#copper2)" letter-spacing="5">POWER SOLUTIONS</text>
+        <text x="200" y="108" text-anchor="middle" font-family="DM Sans,sans-serif" font-weight="400" font-size="9" fill="#665a4f" letter-spacing="2">MARINE ENGINEERING · DUBAI</text>
+      </svg>
+    </div>
+    <div class="logo-cell light">
+      <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="copper2b" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#b87a4a"/>
+            <stop offset="100%" stop-color="#8a5530"/>
+          </linearGradient>
+        </defs>
+        <text x="200" y="52" text-anchor="middle" font-family="DM Sans,sans-serif" font-weight="700" font-size="38" fill="#2a2420" letter-spacing="3">Euro Gulf</text>
+        <rect x="80" y="64" width="240" height="2" rx="1" fill="url(#copper2b)" opacity=".5"/>
+        <text x="200" y="85" text-anchor="middle" font-family="DM Sans,sans-serif" font-weight="500" font-size="13" fill="url(#copper2b)" letter-spacing="5">POWER SOLUTIONS</text>
+        <text x="200" y="108" text-anchor="middle" font-family="DM Sans,sans-serif" font-weight="400" font-size="9" fill="#998577" letter-spacing="2">MARINE ENGINEERING · DUBAI</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- VARIANT 3: Heritage Engineering -->
+<!-- ============================================ -->
+<div class="variant" style="animation-delay:.3s">
+  <div class="variant-header">
+    <span class="variant-num">03</span>
+    <span class="variant-name">Heritage Engineering</span>
+    <span class="variant-desc">Serif-influenced, craft details, blueprint precision</span>
+  </div>
+  <div class="logo-row">
+    <div class="logo-cell dark">
+      <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="bp3" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect width="20" height="20" fill="none"/>
+            <line x1="0" y1="20" x2="20" y2="20" stroke="#1a2a3a" stroke-width=".5"/>
+            <line x1="20" y1="0" x2="20" y2="20" stroke="#1a2a3a" stroke-width=".5"/>
+          </pattern>
+        </defs>
+        <rect x="20" y="10" width="360" height="120" fill="url(#bp3)" rx="2"/>
+        <rect x="20" y="10" width="360" height="120" fill="none" stroke="#1e3348" stroke-width="1" rx="2"/>
+        <!-- corner marks -->
+        <line x1="20" y1="20" x2="35" y2="20" stroke="#2a5580" stroke-width="1"/>
+        <line x1="20" y1="20" x2="20" y2="35" stroke="#2a5580" stroke-width="1"/>
+        <line x1="380" y1="20" x2="365" y2="20" stroke="#2a5580" stroke-width="1"/>
+        <line x1="380" y1="20" x2="380" y2="35" stroke="#2a5580" stroke-width="1"/>
+        <line x1="20" y1="120" x2="35" y2="120" stroke="#2a5580" stroke-width="1"/>
+        <line x1="20" y1="120" x2="20" y2="105" stroke="#2a5580" stroke-width="1"/>
+        <line x1="380" y1="120" x2="365" y2="120" stroke="#2a5580" stroke-width="1"/>
+        <line x1="380" y1="120" x2="380" y2="105" stroke="#2a5580" stroke-width="1"/>
+        <text x="200" y="62" text-anchor="middle" font-family="Playfair Display,serif" font-weight="700" font-size="32" fill="#c8dae8" letter-spacing="2">EURO GULF</text>
+        <text x="200" y="84" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-weight="400" font-size="12" fill="#5a8ab0" letter-spacing="6">POWER SOLUTIONS</text>
+        <text x="200" y="112" text-anchor="middle" font-family="JetBrains Mono,monospace" font-weight="400" font-size="7" fill="#345570" letter-spacing="1">EST. DUBAI · MARINE ENGINEERING · REF: EGPS-001</text>
+      </svg>
+    </div>
+    <div class="logo-cell light">
+      <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="bp3b" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect width="20" height="20" fill="none"/>
+            <line x1="0" y1="20" x2="20" y2="20" stroke="#d5dce3" stroke-width=".5"/>
+            <line x1="20" y1="0" x2="20" y2="20" stroke="#d5dce3" stroke-width=".5"/>
+          </pattern>
+        </defs>
+        <rect x="20" y="10" width="360" height="120" fill="url(#bp3b)" rx="2"/>
+        <rect x="20" y="10" width="360" height="120" fill="none" stroke="#bcc8d4" stroke-width="1" rx="2"/>
+        <line x1="20" y1="20" x2="35" y2="20" stroke="#7a9ab5" stroke-width="1"/>
+        <line x1="20" y1="20" x2="20" y2="35" stroke="#7a9ab5" stroke-width="1"/>
+        <line x1="380" y1="20" x2="35" y2="20" stroke="none"/>
+        <line x1="380" y1="20" x2="365" y2="20" stroke="#7a9ab5" stroke-width="1"/>
+        <line x1="380" y1="20" x2="380" y2="35" stroke="#7a9ab5" stroke-width="1"/>
+        <line x1="20" y1="120" x2="35" y2="120" stroke="#7a9ab5" stroke-width="1"/>
+        <line x1="20" y1="120" x2="20" y2="105" stroke="#7a9ab5" stroke-width="1"/>
+        <line x1="380" y1="120" x2="365" y2="120" stroke="#7a9ab5" stroke-width="1"/>
+        <line x1="380" y1="120" x2="380" y2="105" stroke="#7a9ab5" stroke-width="1"/>
+        <text x="200" y="62" text-anchor="middle" font-family="Playfair Display,serif" font-weight="700" font-size="32" fill="#1a2a3a" letter-spacing="2">EURO GULF</text>
+        <text x="200" y="84" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-weight="400" font-size="12" fill="#3a6a90" letter-spacing="6">POWER SOLUTIONS</text>
+        <text x="200" y="112" text-anchor="middle" font-family="JetBrains Mono,monospace" font-weight="400" font-size="7" fill="#7a98b0" letter-spacing="1">EST. DUBAI · MARINE ENGINEERING · REF: EGPS-001</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- VARIANT 4: Kinetic Type -->
+<!-- ============================================ -->
+<div class="variant" style="animation-delay:.4s">
+  <div class="variant-header">
+    <span class="variant-num">04</span>
+    <span class="variant-name">Kinetic Type</span>
+    <span class="variant-desc">Built-in motion suggestion, parts that animate</span>
+  </div>
+  <div class="logo-row">
+    <div class="logo-cell dark">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <style>
+            @keyframes slideE{0%{transform:translateX(-6px);opacity:0}100%{transform:translateX(0);opacity:1}}
+            @keyframes slideG{0%{transform:translateX(6px);opacity:0}100%{transform:translateX(0);opacity:1}}
+            @keyframes slideP{0%{transform:translateY(-6px);opacity:0}100%{transform:translateY(0);opacity:1}}
+            @keyframes slideS{0%{transform:translateY(6px);opacity:0}100%{transform:translateY(0);opacity:1}}
+            .k-e{animation:slideE .8s ease .3s both}
+            .k-g{animation:slideG .8s ease .45s both}
+            .k-p{animation:slideP .8s ease .6s both}
+            .k-s{animation:slideS .8s ease .75s both}
+            @keyframes dashDraw{0%{stroke-dashoffset:300}100%{stroke-dashoffset:0}}
+            .k-line{stroke-dasharray:300;animation:dashDraw 1.2s ease .2s both}
+          </style>
+        </defs>
+        <g class="k-e"><text x="110" y="65" font-family="Outfit" font-weight="900" font-size="56" fill="#fff">E</text></g>
+        <g class="k-g"><text x="152" y="65" font-family="Outfit" font-weight="900" font-size="56" fill="#fff">G</text></g>
+        <g class="k-p"><text x="200" y="65" font-family="Outfit" font-weight="900" font-size="56" fill="#fff">P</text></g>
+        <g class="k-s"><text x="242" y="65" font-family="Outfit" font-weight="900" font-size="56" fill="#fff">S</text></g>
+        <line class="k-line" x1="108" y1="78" x2="282" y2="78" stroke="#fff" stroke-width="1.5" opacity=".4"/>
+        <text x="200" y="100" text-anchor="middle" font-family="Space Grotesk" font-weight="400" font-size="10" fill="#888" letter-spacing="4" opacity=".8">EURO GULF POWER SOLUTIONS</text>
+      </svg>
+    </div>
+    <div class="logo-cell light">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <style>
+            .k2-e{animation:slideE .8s ease .3s both}
+            .k2-g{animation:slideG .8s ease .45s both}
+            .k2-p{animation:slideP .8s ease .6s both}
+            .k2-s{animation:slideS .8s ease .75s both}
+            .k2-line{stroke-dasharray:300;animation:dashDraw 1.2s ease .2s both}
+          </style>
+        </defs>
+        <g class="k2-e"><text x="110" y="65" font-family="Outfit" font-weight="900" font-size="56" fill="#111">E</text></g>
+        <g class="k2-g"><text x="152" y="65" font-family="Outfit" font-weight="900" font-size="56" fill="#111">G</text></g>
+        <g class="k2-p"><text x="200" y="65" font-family="Outfit" font-weight="900" font-size="56" fill="#111">P</text></g>
+        <g class="k2-s"><text x="242" y="65" font-family="Outfit" font-weight="900" font-size="56" fill="#111">S</text></g>
+        <line class="k2-line" x1="108" y1="78" x2="282" y2="78" stroke="#111" stroke-width="1.5" opacity=".2"/>
+        <text x="200" y="100" text-anchor="middle" font-family="Space Grotesk" font-weight="400" font-size="10" fill="#777" letter-spacing="4" opacity=".8">EURO GULF POWER SOLUTIONS</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- VARIANT 5: Stacked System -->
+<!-- ============================================ -->
+<div class="variant" style="animation-delay:.5s">
+  <div class="variant-header">
+    <span class="variant-num">05</span>
+    <span class="variant-name">Stacked System</span>
+    <span class="variant-desc">"EURO GULF" stacked with "POWER SOLUTIONS" as flexible system</span>
+  </div>
+  <div class="logo-row">
+    <div class="logo-cell dark">
+      <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
+        <text x="60" y="48" font-family="Outfit" font-weight="900" font-size="40" fill="#fff" letter-spacing="-1">EURO</text>
+        <text x="60" y="88" font-family="Outfit" font-weight="900" font-size="40" fill="#fff" letter-spacing="-1">GULF</text>
+        <rect x="210" y="28" width="1" height="65" fill="#444"/>
+        <text x="224" y="46" font-family="Space Grotesk" font-weight="600" font-size="13" fill="#aaa" letter-spacing="3">POWER</text>
+        <text x="224" y="64" font-family="Space Grotesk" font-weight="600" font-size="13" fill="#aaa" letter-spacing="3">SOLUTIONS</text>
+        <text x="224" y="88" font-family="JetBrains Mono" font-weight="400" font-size="9" fill="#555" letter-spacing="1">EGPS</text>
+        <rect x="60" y="102" width="260" height="1" fill="#333"/>
+        <text x="60" y="120" font-family="Space Grotesk" font-weight="400" font-size="8" fill="#555" letter-spacing="2">MARINE ENGINEERING</text>
+        <text x="320" y="120" text-anchor="end" font-family="Space Grotesk" font-weight="400" font-size="8" fill="#555" letter-spacing="2">DUBAI, UAE</text>
+      </svg>
+    </div>
+    <div class="logo-cell light">
+      <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
+        <text x="60" y="48" font-family="Outfit" font-weight="900" font-size="40" fill="#111" letter-spacing="-1">EURO</text>
+        <text x="60" y="88" font-family="Outfit" font-weight="900" font-size="40" fill="#111" letter-spacing="-1">GULF</text>
+        <rect x="210" y="28" width="1" height="65" fill="#ccc"/>
+        <text x="224" y="46" font-family="Space Grotesk" font-weight="600" font-size="13" fill="#666" letter-spacing="3">POWER</text>
+        <text x="224" y="64" font-family="Space Grotesk" font-weight="600" font-size="13" fill="#666" letter-spacing="3">SOLUTIONS</text>
+        <text x="224" y="88" font-family="JetBrains Mono" font-weight="400" font-size="9" fill="#aaa" letter-spacing="1">EGPS</text>
+        <rect x="60" y="102" width="260" height="1" fill="#ddd"/>
+        <text x="60" y="120" font-family="Space Grotesk" font-weight="400" font-size="8" fill="#aaa" letter-spacing="2">MARINE ENGINEERING</text>
+        <text x="320" y="120" text-anchor="end" font-family="Space Grotesk" font-weight="400" font-size="8" fill="#aaa" letter-spacing="2">DUBAI, UAE</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- VARIANT 6: Gold Standard -->
+<!-- ============================================ -->
+<div class="variant" style="animation-delay:.6s">
+  <div class="variant-header">
+    <span class="variant-num">06</span>
+    <span class="variant-name">Gold Standard</span>
+    <span class="variant-desc">Dubai luxury, gold foil aesthetic, refined serif + sans pairing</span>
+  </div>
+  <div class="logo-row">
+    <div class="logo-cell dark" style="background:#0a0a0e">
+      <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gold6" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f5e6b8"/>
+            <stop offset="30%" stop-color="#d4a853"/>
+            <stop offset="50%" stop-color="#f5e6b8"/>
+            <stop offset="70%" stop-color="#c49632"/>
+            <stop offset="100%" stop-color="#f5e6b8"/>
+          </linearGradient>
+          <linearGradient id="gold6line" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#c49632" stop-opacity="0"/>
+            <stop offset="20%" stop-color="#d4a853"/>
+            <stop offset="80%" stop-color="#d4a853"/>
+            <stop offset="100%" stop-color="#c49632" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- decorative top line -->
+        <line x1="80" y1="18" x2="320" y2="18" stroke="url(#gold6line)" stroke-width=".5"/>
+        <text x="200" y="56" text-anchor="middle" font-family="Playfair Display,serif" font-weight="700" font-size="34" fill="url(#gold6)" letter-spacing="4">Euro Gulf</text>
+        <line x1="80" y1="68" x2="320" y2="68" stroke="url(#gold6line)" stroke-width=".5"/>
+        <text x="200" y="88" text-anchor="middle" font-family="Space Grotesk" font-weight="400" font-size="12" fill="#d4a853" letter-spacing="8" opacity=".7">POWER SOLUTIONS</text>
+        <!-- decorative bottom line -->
+        <line x1="80" y1="102" x2="320" y2="102" stroke="url(#gold6line)" stroke-width=".5"/>
+        <!-- small diamond -->
+        <polygon points="200,108 204,113 200,118 196,113" fill="#d4a853" opacity=".4"/>
+      </svg>
+    </div>
+    <div class="logo-cell light" style="background:#f8f5ef">
+      <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gold6c" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#8a6e2f"/>
+            <stop offset="50%" stop-color="#b8932e"/>
+            <stop offset="100%" stop-color="#8a6e2f"/>
+          </linearGradient>
+          <linearGradient id="gold6d" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#b8932e" stop-opacity="0"/>
+            <stop offset="20%" stop-color="#b8932e"/>
+            <stop offset="80%" stop-color="#b8932e"/>
+            <stop offset="100%" stop-color="#b8932e" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <line x1="80" y1="18" x2="320" y2="18" stroke="url(#gold6d)" stroke-width=".5"/>
+        <text x="200" y="56" text-anchor="middle" font-family="Playfair Display,serif" font-weight="700" font-size="34" fill="url(#gold6c)" letter-spacing="4">Euro Gulf</text>
+        <line x1="80" y1="68" x2="320" y2="68" stroke="url(#gold6d)" stroke-width=".5"/>
+        <text x="200" y="88" text-anchor="middle" font-family="Space Grotesk" font-weight="400" font-size="12" fill="#8a6e2f" letter-spacing="8" opacity=".7">POWER SOLUTIONS</text>
+        <line x1="80" y1="102" x2="320" y2="102" stroke="url(#gold6d)" stroke-width=".5"/>
+        <polygon points="200,108 204,113 200,118 196,113" fill="#8a6e2f" opacity=".35"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- VARIANT 7: Condensed Power -->
+<!-- ============================================ -->
+<div class="variant" style="animation-delay:.7s">
+  <div class="variant-header">
+    <span class="variant-num">07</span>
+    <span class="variant-name">Condensed Power</span>
+    <span class="variant-desc">Ultra-bold condensed, fills the space, pure authority</span>
+  </div>
+  <div class="logo-row">
+    <div class="logo-cell dark">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="200" y="54" text-anchor="middle" font-family="Outfit" font-weight="900" font-size="58" fill="#fff" letter-spacing="-2" textLength="330" lengthAdjust="spacing">EURO GULF</text>
+        <rect x="35" y="62" width="330" height="3" fill="#fff"/>
+        <text x="200" y="84" text-anchor="middle" font-family="Outfit" font-weight="900" font-size="24" fill="#fff" letter-spacing="12" textLength="330" lengthAdjust="spacing">POWER SOLUTIONS</text>
+        <rect x="35" y="92" width="330" height="1" fill="#fff" opacity=".3"/>
+        <text x="200" y="108" text-anchor="middle" font-family="JetBrains Mono" font-weight="400" font-size="8" fill="#666" letter-spacing="4">MARINE ENGINEERING</text>
+      </svg>
+    </div>
+    <div class="logo-cell light">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="200" y="54" text-anchor="middle" font-family="Outfit" font-weight="900" font-size="58" fill="#111" letter-spacing="-2" textLength="330" lengthAdjust="spacing">EURO GULF</text>
+        <rect x="35" y="62" width="330" height="3" fill="#111"/>
+        <text x="200" y="84" text-anchor="middle" font-family="Outfit" font-weight="900" font-size="24" fill="#111" letter-spacing="12" textLength="330" lengthAdjust="spacing">POWER SOLUTIONS</text>
+        <rect x="35" y="92" width="330" height="1" fill="#111" opacity=".15"/>
+        <text x="200" y="108" text-anchor="middle" font-family="JetBrains Mono" font-weight="400" font-size="8" fill="#999" letter-spacing="4">MARINE ENGINEERING</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- VARIANT 8: Negative Cut -->
+<!-- ============================================ -->
+<div class="variant" style="animation-delay:.8s">
+  <div class="variant-header">
+    <span class="variant-num">08</span>
+    <span class="variant-name">Negative Cut</span>
+    <span class="variant-desc">Letters carved from solid blocks, negative space defines form</span>
+  </div>
+  <div class="logo-row">
+    <div class="logo-cell dark">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <mask id="cut8">
+            <rect x="30" y="15" width="340" height="60" fill="white"/>
+            <text x="200" y="62" text-anchor="middle" font-family="Outfit" font-weight="900" font-size="50" fill="black" letter-spacing="6">EGPS</text>
+          </mask>
+        </defs>
+        <!-- solid block with letters cut out -->
+        <rect x="30" y="15" width="340" height="60" fill="#e0e0e0" mask="url(#cut8)" rx="3"/>
+        <!-- thin border around block -->
+        <rect x="30" y="15" width="340" height="60" fill="none" stroke="#333" stroke-width=".5" rx="3"/>
+        <text x="200" y="100" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="11" fill="#888" letter-spacing="5">EURO GULF POWER SOLUTIONS</text>
+      </svg>
+    </div>
+    <div class="logo-cell light">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <mask id="cut8b">
+            <rect x="30" y="15" width="340" height="60" fill="white"/>
+            <text x="200" y="62" text-anchor="middle" font-family="Outfit" font-weight="900" font-size="50" fill="black" letter-spacing="6">EGPS</text>
+          </mask>
+        </defs>
+        <rect x="30" y="15" width="340" height="60" fill="#1a1a1a" mask="url(#cut8b)" rx="3"/>
+        <rect x="30" y="15" width="340" height="60" fill="none" stroke="#ccc" stroke-width=".5" rx="3"/>
+        <text x="200" y="100" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="11" fill="#666" letter-spacing="5">EURO GULF POWER SOLUTIONS</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- VARIANT 9: Technical Mono -->
+<!-- ============================================ -->
+<div class="variant" style="animation-delay:.9s">
+  <div class="variant-header">
+    <span class="variant-num">09</span>
+    <span class="variant-name">Technical Mono</span>
+    <span class="variant-desc">Monospaced engineering font, data/precision aesthetic, dash markers</span>
+  </div>
+  <div class="logo-row">
+    <div class="logo-cell dark">
+      <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="glow9" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4af" stop-opacity=".15"/>
+            <stop offset="100%" stop-color="#4af" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- subtle glow bg -->
+        <rect x="40" y="15" width="320" height="100" fill="url(#glow9)" rx="4"/>
+        <!-- dash markers left -->
+        <line x1="44" y1="36" x2="54" y2="36" stroke="#4af" stroke-width="1" opacity=".5"/>
+        <line x1="44" y1="56" x2="54" y2="56" stroke="#4af" stroke-width="1" opacity=".3"/>
+        <line x1="44" y1="76" x2="54" y2="76" stroke="#4af" stroke-width="1" opacity=".5"/>
+        <!-- dash markers right -->
+        <line x1="346" y1="36" x2="356" y2="36" stroke="#4af" stroke-width="1" opacity=".5"/>
+        <line x1="346" y1="56" x2="356" y2="56" stroke="#4af" stroke-width="1" opacity=".3"/>
+        <line x1="346" y1="76" x2="356" y2="76" stroke="#4af" stroke-width="1" opacity=".5"/>
+        <!-- top reference line -->
+        <text x="62" y="25" font-family="JetBrains Mono" font-weight="400" font-size="7" fill="#4af" opacity=".4">REF://EGPS.SYSTEMS</text>
+        <text x="200" y="44" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="32" fill="#fff" letter-spacing="4">EURO GULF</text>
+        <!-- divider -->
+        <line x1="62" y1="55" x2="338" y2="55" stroke="#4af" stroke-width=".5" opacity=".25" stroke-dasharray="2,4"/>
+        <text x="200" y="75" text-anchor="middle" font-family="JetBrains Mono" font-weight="500" font-size="14" fill="#4af" letter-spacing="6" opacity=".8">POWER SOLUTIONS</text>
+        <!-- bottom data line -->
+        <text x="62" y="100" font-family="JetBrains Mono" font-weight="400" font-size="7" fill="#4af" opacity=".3">SYS.MARINE</text>
+        <text x="338" y="100" text-anchor="end" font-family="JetBrains Mono" font-weight="400" font-size="7" fill="#4af" opacity=".3">LOC.DUBAI.UAE</text>
+      </svg>
+    </div>
+    <div class="logo-cell light">
+      <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg">
+        <line x1="44" y1="36" x2="54" y2="36" stroke="#1a5a8a" stroke-width="1" opacity=".4"/>
+        <line x1="44" y1="56" x2="54" y2="56" stroke="#1a5a8a" stroke-width="1" opacity=".2"/>
+        <line x1="44" y1="76" x2="54" y2="76" stroke="#1a5a8a" stroke-width="1" opacity=".4"/>
+        <line x1="346" y1="36" x2="356" y2="36" stroke="#1a5a8a" stroke-width="1" opacity=".4"/>
+        <line x1="346" y1="56" x2="356" y2="56" stroke="#1a5a8a" stroke-width="1" opacity=".2"/>
+        <line x1="346" y1="76" x2="356" y2="76" stroke="#1a5a8a" stroke-width="1" opacity=".4"/>
+        <text x="62" y="25" font-family="JetBrains Mono" font-weight="400" font-size="7" fill="#1a5a8a" opacity=".35">REF://EGPS.SYSTEMS</text>
+        <text x="200" y="44" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="32" fill="#111" letter-spacing="4">EURO GULF</text>
+        <line x1="62" y1="55" x2="338" y2="55" stroke="#1a5a8a" stroke-width=".5" opacity=".2" stroke-dasharray="2,4"/>
+        <text x="200" y="75" text-anchor="middle" font-family="JetBrains Mono" font-weight="500" font-size="14" fill="#1a5a8a" letter-spacing="6" opacity=".7">POWER SOLUTIONS</text>
+        <text x="62" y="100" font-family="JetBrains Mono" font-weight="400" font-size="7" fill="#1a5a8a" opacity=".25">SYS.MARINE</text>
+        <text x="338" y="100" text-anchor="end" font-family="JetBrains Mono" font-weight="400" font-size="7" fill="#1a5a8a" opacity=".25">LOC.DUBAI.UAE</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- VARIANT 10: Retro-Industrial -->
+<!-- ============================================ -->
+<div class="variant" style="animation-delay:1s">
+  <div class="variant-header">
+    <span class="variant-num">10</span>
+    <span class="variant-name">Retro-Industrial</span>
+    <span class="variant-desc">Chrome/steel texture reference, vintage engineering meets 2026</span>
+  </div>
+  <div class="logo-row">
+    <div class="logo-cell dark" style="background:#0d0d0f">
+      <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="chrome10" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e8e8e8"/>
+            <stop offset="25%" stop-color="#aaa"/>
+            <stop offset="50%" stop-color="#e8e8e8"/>
+            <stop offset="75%" stop-color="#999"/>
+            <stop offset="100%" stop-color="#ccc"/>
+          </linearGradient>
+          <linearGradient id="chrome10edge" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#666"/>
+            <stop offset="50%" stop-color="#999"/>
+            <stop offset="100%" stop-color="#555"/>
+          </linearGradient>
+          <pattern id="rivet10" width="40" height="40" patternUnits="userSpaceOnUse">
+            <circle cx="0" cy="0" r="1.5" fill="#555" opacity=".3"/>
+            <circle cx="40" cy="0" r="1.5" fill="#555" opacity=".3"/>
+            <circle cx="0" cy="40" r="1.5" fill="#555" opacity=".3"/>
+            <circle cx="40" cy="40" r="1.5" fill="#555" opacity=".3"/>
+          </pattern>
+        </defs>
+        <!-- outer frame -->
+        <rect x="25" y="12" width="350" height="116" rx="4" fill="none" stroke="#333" stroke-width="1.5"/>
+        <!-- rivet texture overlay -->
+        <rect x="25" y="12" width="350" height="116" rx="4" fill="url(#rivet10)" opacity=".5"/>
+        <!-- corner rivets -->
+        <circle cx="35" cy="22" r="3" fill="#333" stroke="#444" stroke-width=".5"/>
+        <circle cx="365" cy="22" r="3" fill="#333" stroke="#444" stroke-width=".5"/>
+        <circle cx="35" cy="118" r="3" fill="#333" stroke="#444" stroke-width=".5"/>
+        <circle cx="365" cy="118" r="3" fill="#333" stroke="#444" stroke-width=".5"/>
+        <!-- main text chrome -->
+        <text x="200" y="62" text-anchor="middle" font-family="Outfit" font-weight="900" font-size="42" fill="url(#chrome10)" letter-spacing="3">EURO GULF</text>
+        <text x="200" y="63" text-anchor="middle" font-family="Outfit" font-weight="900" font-size="42" fill="none" stroke="url(#chrome10edge)" stroke-width=".3" letter-spacing="3">EURO GULF</text>
+        <!-- divider -->
+        <line x1="60" y1="74" x2="340" y2="74" stroke="#444" stroke-width="1"/>
+        <line x1="60" y1="76" x2="340" y2="76" stroke="#333" stroke-width=".5"/>
+        <!-- subtitle -->
+        <text x="200" y="95" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="12" fill="#888" letter-spacing="6">POWER SOLUTIONS</text>
+        <!-- bottom tag -->
+        <text x="200" y="116" text-anchor="middle" font-family="JetBrains Mono" font-weight="400" font-size="7" fill="#444" letter-spacing="2">ENGINEERED IN DUBAI — SINCE EST.</text>
+      </svg>
+    </div>
+    <div class="logo-cell light" style="background:#eae6e0">
+      <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="chrome10c" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#333"/>
+            <stop offset="25%" stop-color="#555"/>
+            <stop offset="50%" stop-color="#2a2a2a"/>
+            <stop offset="75%" stop-color="#555"/>
+            <stop offset="100%" stop-color="#333"/>
+          </linearGradient>
+        </defs>
+        <rect x="25" y="12" width="350" height="116" rx="4" fill="none" stroke="#c0b8ae" stroke-width="1.5"/>
+        <circle cx="35" cy="22" r="3" fill="#c0b8ae" stroke="#b0a89e" stroke-width=".5"/>
+        <circle cx="365" cy="22" r="3" fill="#c0b8ae" stroke="#b0a89e" stroke-width=".5"/>
+        <circle cx="35" cy="118" r="3" fill="#c0b8ae" stroke="#b0a89e" stroke-width=".5"/>
+        <circle cx="365" cy="118" r="3" fill="#c0b8ae" stroke="#b0a89e" stroke-width=".5"/>
+        <text x="200" y="62" text-anchor="middle" font-family="Outfit" font-weight="900" font-size="42" fill="url(#chrome10c)" letter-spacing="3">EURO GULF</text>
+        <line x1="60" y1="74" x2="340" y2="74" stroke="#c0b8ae" stroke-width="1"/>
+        <line x1="60" y1="76" x2="340" y2="76" stroke="#d0c8be" stroke-width=".5"/>
+        <text x="200" y="95" text-anchor="middle" font-family="Space Grotesk" font-weight="600" font-size="12" fill="#6a6058" letter-spacing="6">POWER SOLUTIONS</text>
+        <text x="200" y="116" text-anchor="middle" font-family="JetBrains Mono" font-weight="400" font-size="7" fill="#a09888" letter-spacing="2">ENGINEERED IN DUBAI — SINCE EST.</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+</div><!-- end grid -->
+
+<script>
+// Stagger animation delays based on scroll visibility
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.animationPlayState = 'running';
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.variant').forEach(v => {
+  v.style.animationPlayState = 'paused';
+  observer.observe(v);
+});
+</script>
+</body>
+</html>
