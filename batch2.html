@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EGPS Logo Concepts — Batch 2 (Variants 11–20)</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-primary: #0a0c10;
+  --bg-card: #12151c;
+  --bg-light: #f0ede8;
+  --bg-light-card: #ffffff;
+  --text-primary: #e8e4dd;
+  --text-muted: #7a7670;
+  --accent: #c7943e;
+  --accent-dim: #8a6628;
+  --border: #1e222c;
+  --navy: #0d2137;
+  --copper: #b87333;
+  --steel: #8a9bae;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+.page-header {
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(199,148,62,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.page-header h1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem;
+}
+.page-header h1 span { color: var(--accent); }
+.page-header p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+@media (min-width: 900px) { .gallery { grid-template-columns: 1fr 1fr; } }
+
+.logo-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-card);
+  opacity: 0;
+  transform: translateY(24px);
+  animation: cardIn 0.6s ease forwards;
+}
+.logo-card:nth-child(1) { animation-delay: 0.05s; }
+.logo-card:nth-child(2) { animation-delay: 0.12s; }
+.logo-card:nth-child(3) { animation-delay: 0.19s; }
+.logo-card:nth-child(4) { animation-delay: 0.26s; }
+.logo-card:nth-child(5) { animation-delay: 0.33s; }
+.logo-card:nth-child(6) { animation-delay: 0.40s; }
+.logo-card:nth-child(7) { animation-delay: 0.47s; }
+.logo-card:nth-child(8) { animation-delay: 0.54s; }
+.logo-card:nth-child(9) { animation-delay: 0.61s; }
+.logo-card:nth-child(10) { animation-delay: 0.68s; }
+@keyframes cardIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-header {
+  padding: 1rem 1.25rem 0.75rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.card-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  min-width: 2rem;
+}
+.card-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+.card-desc {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 300;
+}
+.preview-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  min-height: 160px;
+}
+.preview.dark { background: var(--navy); }
+.preview.light { background: var(--bg-light); }
+.preview svg {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-top: 1px solid var(--border);
+}
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <h1>EGPS — <span>Batch 2</span></h1>
+  <p>Variants 11–20 &middot; Creative Explorations &middot; Eurogulf Power Solutions</p>
+</header>
+
+<main class="gallery">
+
+<!-- ============ 11. PROPELLER ABSTRACT ============ -->
+<article class="logo-card">
+  <div class="card-header">
+    <span class="card-number">011</span>
+    <span class="card-title">Propeller Abstract</span>
+  </div>
+  <div class="card-desc">Stylized three-blade propeller forms the counter of the G, linking marine engineering to the lettermark. Blades radiate from center with rotational energy.</div>
+  <div class="preview-row">
+    <div class="preview dark">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="p11g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#c7943e"/>
+            <stop offset="100%" stop-color="#e8c776"/>
+          </linearGradient>
+        </defs>
+        <!-- E -->
+        <path d="M20,15 h50 v16 h-30 v14 h25 v16 h-25 v14 h30 v16 h-50 z" fill="#e8e4dd"/>
+        <!-- G with propeller -->
+        <path d="M95,15 h50 v16 h-30 v44 h15 v-16 h20 v36 h-55 c-12,0-20,-8-20,-20 V35 c0,-12,8,-20,20,-20z" fill="#e8e4dd"/>
+        <!-- Propeller in G counter -->
+        <g transform="translate(127,58)">
+          <path d="M0,-18 C6,-16 8,-6 0,0 C-6,-4 -8,-14 0,-18z" fill="url(#p11g)" opacity="0.9">
+            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+          </path>
+          <path d="M0,-18 C6,-16 8,-6 0,0 C-6,-4 -8,-14 0,-18z" fill="url(#p11g)" opacity="0.9" transform="rotate(120)">
+            <animateTransform attributeName="transform" type="rotate" from="120" to="480" dur="8s" repeatCount="indefinite"/>
+          </path>
+          <path d="M0,-18 C6,-16 8,-6 0,0 C-6,-4 -8,-14 0,-18z" fill="url(#p11g)" opacity="0.9" transform="rotate(240)">
+            <animateTransform attributeName="transform" type="rotate" from="240" to="600" dur="8s" repeatCount="indefinite"/>
+          </path>
+          <circle r="3" fill="url(#p11g)"/>
+        </g>
+        <!-- P -->
+        <path d="M175,15 h35 c14,0 24,10 24,24 c0,14-10,24-24,24 h-15 v32 h-20 z M195,31 v16 h12 c5,0 8,-3 8,-8 c0,-5-3,-8-8,-8 z" fill="#e8e4dd"/>
+        <!-- S -->
+        <path d="M260,15 h45 v16 h-30 v12 h30 v16 h-30 v12 h30 v16 h-45 c-8,0-15,-7-15,-15 v-12 c0,-8,7,-15,15,-15 h10 v-2 h-10 c-8,0-15,-7-15,-15 v-1 c0,-7,7,-12,15,-12z" fill="#e8e4dd"/>
+        <!-- Tagline -->
+        <text x="330" y="100" font-family="'Space Grotesk',sans-serif" font-size="8" fill="#7a7670" letter-spacing="0.15em">POWER</text>
+      </svg>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="p11g2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#8a6628"/>
+            <stop offset="100%" stop-color="#c7943e"/>
+          </linearGradient>
+        </defs>
+        <path d="M20,15 h50 v16 h-30 v14 h25 v16 h-25 v14 h30 v16 h-50 z" fill="#0d2137"/>
+        <path d="M95,15 h50 v16 h-30 v44 h15 v-16 h20 v36 h-55 c-12,0-20,-8-20,-20 V35 c0,-12,8,-20,20,-20z" fill="#0d2137"/>
+        <g transform="translate(127,58)">
+          <path d="M0,-18 C6,-16 8,-6 0,0 C-6,-4 -8,-14 0,-18z" fill="url(#p11g2)" opacity="0.9">
+            <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+          </path>
+          <path d="M0,-18 C6,-16 8,-6 0,0 C-6,-4 -8,-14 0,-18z" fill="url(#p11g2)" opacity="0.9" transform="rotate(120)">
+            <animateTransform attributeName="transform" type="rotate" from="120" to="480" dur="8s" repeatCount="indefinite"/>
+          </path>
+          <path d="M0,-18 C6,-16 8,-6 0,0 C-6,-4 -8,-14 0,-18z" fill="url(#p11g2)" opacity="0.9" transform="rotate(240)">
+            <animateTransform attributeName="transform" type="rotate" from="240" to="600" dur="8s" repeatCount="indefinite"/>
+          </path>
+          <circle r="3" fill="url(#p11g2)"/>
+        </g>
+        <path d="M175,15 h35 c14,0 24,10 24,24 c0,14-10,24-24,24 h-15 v32 h-20 z M195,31 v16 h12 c5,0 8,-3 8,-8 c0,-5-3,-8-8,-8 z" fill="#0d2137"/>
+        <path d="M260,15 h45 v16 h-30 v12 h30 v16 h-30 v12 h30 v16 h-45 c-8,0-15,-7-15,-15 v-12 c0,-8,7,-15,15,-15 h10 v-2 h-10 c-8,0-15,-7-15,-15 v-1 c0,-7,7,-12,15,-12z" fill="#0d2137"/>
+        <text x="330" y="100" font-family="'Space Grotesk',sans-serif" font-size="8" fill="#7a7670" letter-spacing="0.15em">POWER</text>
+      </svg>
+    </div>
+  </div>
+</article>
+
+<!-- ============ 12. DUAL-TONE SPLIT ============ -->
+<article class="logo-card">
+  <div class="card-header">
+    <span class="card-number">012</span>
+    <span class="card-title">Dual-tone Split</span>
+  </div>
+  <div class="card-desc">Each letter is horizontally bisected — top half in navy, bottom in copper. The split line creates visual tension and references engineering precision cuts.</div>
+  <div class="preview-row">
+    <div class="preview dark">
+      <svg viewBox="0 0 360 110" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="c12top"><rect x="0" y="0" width="360" height="55"/></clipPath>
+          <clipPath id="c12bot"><rect x="0" y="55" width="360" height="55"/></clipPath>
+        </defs>
+        <g clip-path="url(#c12top)">
+          <!-- E -->
+          <rect x="15" y="10" width="18" height="90" fill="#8a9bae"/>
+          <rect x="15" y="10" width="55" height="15" fill="#8a9bae"/>
+          <rect x="15" y="47" width="45" height="15" fill="#8a9bae"/>
+          <rect x="15" y="85" width="55" height="15" fill="#8a9bae"/>
+          <!-- G -->
+          <rect x="85" y="10" width="55" height="15" fill="#8a9bae"/>
+          <rect x="85" y="10" width="18" height="90" fill="#8a9bae"/>
+          <rect x="85" y="85" width="55" height="15" fill="#8a9bae"/>
+          <rect x="122" y="55" width="18" height="45" fill="#8a9bae"/>
+          <rect x="110" y="55" width="30" height="12" fill="#8a9bae"/>
+          <!-- P -->
+          <rect x="160" y="10" width="18" height="90" fill="#8a9bae"/>
+          <rect x="160" y="10" width="50" height="15" fill="#8a9bae"/>
+          <rect x="195" y="10" width="15" height="50" fill="#8a9bae"/>
+          <rect x="160" y="47" width="50" height="13" fill="#8a9bae"/>
+          <!-- S -->
+          <rect x="235" y="10" width="55" height="15" fill="#8a9bae"/>
+          <rect x="235" y="10" width="18" height="45" fill="#8a9bae"/>
+          <rect x="235" y="47" width="55" height="13" fill="#8a9bae"/>
+          <rect x="272" y="55" width="18" height="45" fill="#8a9bae"/>
+          <rect x="235" y="85" width="55" height="15" fill="#8a9bae"/>
+        </g>
+        <g clip-path="url(#c12bot)">
+          <rect x="15" y="10" width="18" height="90" fill="#b87333"/>
+          <rect x="15" y="10" width="55" height="15" fill="#b87333"/>
+          <rect x="15" y="47" width="45" height="15" fill="#b87333"/>
+          <rect x="15" y="85" width="55" height="15" fill="#b87333"/>
+          <rect x="85" y="10" width="55" height="15" fill="#b87333"/>
+          <rect x="85" y="10" width="18" height="90" fill="#b87333"/>
+          <rect x="85" y="85" width="55" height="15" fill="#b87333"/>
+          <rect x="122" y="55" width="18" height="45" fill="#b87333"/>
+          <rect x="110" y="55" width="30" height="12" fill="#b87333"/>
+          <rect x="160" y="10" width="18" height="90" fill="#b87333"/>
+          <rect x="160" y="10" width="50" height="15" fill="#b87333"/>
+          <rect x="195" y="10" width="15" height="50" fill="#b87333"/>
+          <rect x="160" y="47" width="50" height="13" fill="#b87333"/>
+          <rect x="235" y="10" width="55" height="15" fill="#b87333"/>
+          <rect x="235" y="10" width="18" height="45" fill="#b87333"/>
+          <rect x="235" y="47" width="55" height="13" fill="#b87333"/>
+          <rect x="272" y="55" width="18" height="45" fill="#b87333"/>
+          <rect x="235" y="85" width="55" height="15" fill="#b87333"/>
+        </g>
+        <!-- split line -->
+        <line x1="10" y1="55" x2="300" y2="55" stroke="#c7943e" stroke-width="0.5" opacity="0.5"/>
+      </svg>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 360 110" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="c12topL"><rect x="0" y="0" width="360" height="55"/></clipPath>
+          <clipPath id="c12botL"><rect x="0" y="55" width="360" height="55"/></clipPath>
+        </defs>
+        <g clip-path="url(#c12topL)">
+          <rect x="15" y="10" width="18" height="90" fill="#0d2137"/>
+          <rect x="15" y="10" width="55" height="15" fill="#0d2137"/>
+          <rect x="15" y="47" width="45" height="15" fill="#0d2137"/>
+          <rect x="15" y="85" width="55" height="15" fill="#0d2137"/>
+          <rect x="85" y="10" width="55" height="15" fill="#0d2137"/>
+          <rect x="85" y="10" width="18" height="90" fill="#0d2137"/>
+          <rect x="85" y="85" width="55" height="15" fill="#0d2137"/>
+          <rect x="122" y="55" width="18" height="45" fill="#0d2137"/>
+          <rect x="110" y="55" width="30" height="12" fill="#0d2137"/>
+          <rect x="160" y="10" width="18" height="90" fill="#0d2137"/>
+          <rect x="160" y="10" width="50" height="15" fill="#0d2137"/>
+          <rect x="195" y="10" width="15" height="50" fill="#0d2137"/>
+          <rect x="160" y="47" width="50" height="13" fill="#0d2137"/>
+          <rect x="235" y="10" width="55" height="15" fill="#0d2137"/>
+          <rect x="235" y="10" width="18" height="45" fill="#0d2137"/>
+          <rect x="235" y="47" width="55" height="13" fill="#0d2137"/>
+          <rect x="272" y="55" width="18" height="45" fill="#0d2137"/>
+          <rect x="235" y="85" width="55" height="15" fill="#0d2137"/>
+        </g>
+        <g clip-path="url(#c12botL)">
+          <rect x="15" y="10" width="18" height="90" fill="#b87333"/>
+          <rect x="15" y="10" width="55" height="15" fill="#b87333"/>
+          <rect x="15" y="47" width="45" height="15" fill="#b87333"/>
+          <rect x="15" y="85" width="55" height="15" fill="#b87333"/>
+          <rect x="85" y="10" width="55" height="15" fill="#b87333"/>
+          <rect x="85" y="10" width="18" height="90" fill="#b87333"/>
+          <rect x="85" y="85" width="55" height="15" fill="#b87333"/>
+          <rect x="122" y="55" width="18" height="45" fill="#b87333"/>
+          <rect x="110" y="55" width="30" height="12" fill="#b87333"/>
+          <rect x="160" y="10" width="18" height="90" fill="#b87333"/>
+          <rect x="160" y="10" width="50" height="15" fill="#b87333"/>
+          <rect x="195" y="10" width="15" height="50" fill="#b87333"/>
+          <rect x="160" y="47" width="50" height="13" fill="#b87333"/>
+          <rect x="235" y="10" width="55" height="15" fill="#b87333"/>
+          <rect x="235" y="10" width="18" height="45" fill="#b87333"/>
+          <rect x="235" y="47" width="55" height="13" fill="#b87333"/>
+          <rect x="272" y="55" width="18" height="45" fill="#b87333"/>
+          <rect x="235" y="85" width="55" height="15" fill="#b87333"/>
+        </g>
+        <line x1="10" y1="55" x2="300" y2="55" stroke="#8a6628" stroke-width="0.5" opacity="0.4"/>
+      </svg>
+    </div>
+  </div>
+</article>
+
+<!-- ============ 13. CIRCUIT / TECHNICAL ============ -->
+<article class="logo-card">
+  <div class="card-header">
+    <span class="card-number">013</span>
+    <span class="card-title">Circuit / Technical</span>
+  </div>
+  <div class="card-desc">Letters constructed from PCB-style traces and junction nodes. Circuit pathways form the strokes with solder-point circles at corners. Engineering precision meets digital.</div>
+  <div class="preview-row">
+    <div class="preview dark">
+      <svg viewBox="0 0 380 120" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="#4af" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <!-- E -->
+          <polyline points="65,15 15,15 15,100 65,100"/>
+          <line x1="15" y1="57" x2="55" y2="57"/>
+          <!-- G -->
+          <path d="M145,15 L90,15 L90,100 L145,100 L145,60 L120,60"/>
+          <!-- P -->
+          <path d="M165,100 L165,15 L210,15 L210,55 L165,55"/>
+          <!-- S -->
+          <path d="M280,15 L235,15 L235,55 L280,55 L280,100 L235,100"/>
+        </g>
+        <!-- Junction nodes -->
+        <g fill="#4af">
+          <circle cx="15" cy="15" r="4"/><circle cx="65" cy="15" r="4"/>
+          <circle cx="15" cy="100" r="4"/><circle cx="65" cy="100" r="4"/>
+          <circle cx="15" cy="57" r="4"/><circle cx="55" cy="57" r="4"/>
+          <circle cx="90" cy="15" r="4"/><circle cx="145" cy="15" r="4"/>
+          <circle cx="90" cy="100" r="4"/><circle cx="145" cy="100" r="4"/>
+          <circle cx="145" cy="60" r="4"/><circle cx="120" cy="60" r="4"/>
+          <circle cx="165" cy="15" r="4"/><circle cx="210" cy="15" r="4"/>
+          <circle cx="165" cy="100" r="4"/><circle cx="210" cy="55" r="4"/>
+          <circle cx="165" cy="55" r="4"/>
+          <circle cx="235" cy="15" r="4"/><circle cx="280" cy="15" r="4"/>
+          <circle cx="235" cy="55" r="4"/><circle cx="280" cy="55" r="4"/>
+          <circle cx="280" cy="100" r="4"/><circle cx="235" cy="100" r="4"/>
+        </g>
+        <!-- trace lines (decorative) -->
+        <g stroke="#4af" stroke-width="1" opacity="0.3">
+          <line x1="65" y1="15" x2="90" y2="15"/>
+          <line x1="145" y1="40" x2="165" y2="40"/>
+          <line x1="210" y1="35" x2="235" y2="35"/>
+        </g>
+        <text x="290" y="108" font-family="'JetBrains Mono',monospace" font-size="7" fill="#4af" opacity="0.6" letter-spacing="0.2em">v2.0</text>
+      </svg>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 380 120" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="#0d2137" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="65,15 15,15 15,100 65,100"/>
+          <line x1="15" y1="57" x2="55" y2="57"/>
+          <path d="M145,15 L90,15 L90,100 L145,100 L145,60 L120,60"/>
+          <path d="M165,100 L165,15 L210,15 L210,55 L165,55"/>
+          <path d="M280,15 L235,15 L235,55 L280,55 L280,100 L235,100"/>
+        </g>
+        <g fill="#0d2137">
+          <circle cx="15" cy="15" r="4"/><circle cx="65" cy="15" r="4"/>
+          <circle cx="15" cy="100" r="4"/><circle cx="65" cy="100" r="4"/>
+          <circle cx="15" cy="57" r="4"/><circle cx="55" cy="57" r="4"/>
+          <circle cx="90" cy="15" r="4"/><circle cx="145" cy="15" r="4"/>
+          <circle cx="90" cy="100" r="4"/><circle cx="145" cy="100" r="4"/>
+          <circle cx="145" cy="60" r="4"/><circle cx="120" cy="60" r="4"/>
+          <circle cx="165" cy="15" r="4"/><circle cx="210" cy="15" r="4"/>
+          <circle cx="165" cy="100" r="4"/><circle cx="210" cy="55" r="4"/>
+          <circle cx="165" cy="55" r="4"/>
+          <circle cx="235" cy="15" r="4"/><circle cx="280" cy="15" r="4"/>
+          <circle cx="235" cy="55" r="4"/><circle cx="280" cy="55" r="4"/>
+          <circle cx="280" cy="100" r="4"/><circle cx="235" cy="100" r="4"/>
+        </g>
+        <g stroke="#0d2137" stroke-width="1" opacity="0.2">
+          <line x1="65" y1="15" x2="90" y2="15"/>
+          <line x1="145" y1="40" x2="165" y2="40"/>
+          <line x1="210" y1="35" x2="235" y2="35"/>
+        </g>
+        <text x="290" y="108" font-family="'JetBrains Mono',monospace" font-size="7" fill="#0d2137" opacity="0.4" letter-spacing="0.2em">v2.0</text>
+      </svg>
+    </div>
+  </div>
+</article>
+
+<!-- ============ 14. MARITIME DECO ============ -->
+<article class="logo-card">
+  <div class="card-header">
+    <span class="card-number">014</span>
+    <span class="card-title">Maritime Deco</span>
+  </div>
+  <div class="card-desc">Art Deco geometric elegance meets maritime engineering. Tiered fan motifs, symmetrical framing lines, and a gold-on-navy palette evoke 1930s ocean liner luxury.</div>
+  <div class="preview-row">
+    <div class="preview dark">
+      <svg viewBox="0 0 380 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="deco14" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e8c776"/>
+            <stop offset="100%" stop-color="#c7943e"/>
+          </linearGradient>
+        </defs>
+        <!-- Deco frame -->
+        <rect x="15" y="10" width="350" height="120" rx="2" fill="none" stroke="url(#deco14)" stroke-width="1.5"/>
+        <rect x="20" y="15" width="340" height="110" rx="1" fill="none" stroke="url(#deco14)" stroke-width="0.5"/>
+        <!-- Fan ornament top -->
+        <g transform="translate(190,10)" fill="none" stroke="url(#deco14)" stroke-width="0.8">
+          <line x1="0" y1="0" x2="0" y2="-8"/>
+          <line x1="-8" y1="0" x2="-4" y2="-7"/>
+          <line x1="8" y1="0" x2="4" y2="-7"/>
+          <line x1="-15" y1="0" x2="-8" y2="-5"/>
+          <line x1="15" y1="0" x2="8" y2="-5"/>
+        </g>
+        <!-- EGPS text, deco style -->
+        <text x="190" y="82" text-anchor="middle" font-family="'Instrument Serif',serif" font-size="52" fill="url(#deco14)" letter-spacing="0.25em">EGPS</text>
+        <!-- Underline ornament -->
+        <line x1="60" y1="92" x2="320" y2="92" stroke="url(#deco14)" stroke-width="0.8"/>
+        <line x1="80" y1="97" x2="300" y2="97" stroke="url(#deco14)" stroke-width="0.5"/>
+        <!-- Subtitle -->
+        <text x="190" y="115" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="7.5" fill="#c7943e" letter-spacing="0.35em">EUROGULF POWER SOLUTIONS</text>
+      </svg>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 380 140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="15" y="10" width="350" height="120" rx="2" fill="none" stroke="#0d2137" stroke-width="1.5"/>
+        <rect x="20" y="15" width="340" height="110" rx="1" fill="none" stroke="#0d2137" stroke-width="0.5"/>
+        <g transform="translate(190,10)" fill="none" stroke="#0d2137" stroke-width="0.8">
+          <line x1="0" y1="0" x2="0" y2="-8"/>
+          <line x1="-8" y1="0" x2="-4" y2="-7"/>
+          <line x1="8" y1="0" x2="4" y2="-7"/>
+          <line x1="-15" y1="0" x2="-8" y2="-5"/>
+          <line x1="15" y1="0" x2="8" y2="-5"/>
+        </g>
+        <text x="190" y="82" text-anchor="middle" font-family="'Instrument Serif',serif" font-size="52" fill="#0d2137" letter-spacing="0.25em">EGPS</text>
+        <line x1="60" y1="92" x2="320" y2="92" stroke="#0d2137" stroke-width="0.8"/>
+        <line x1="80" y1="97" x2="300" y2="97" stroke="#0d2137" stroke-width="0.5"/>
+        <text x="190" y="115" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="7.5" fill="#0d2137" letter-spacing="0.35em">EUROGULF POWER SOLUTIONS</text>
+      </svg>
+    </div>
+  </div>
+</article>
+
+<!-- ============ 15. BRUTALIST HEAVY ============ -->
+<article class="logo-card">
+  <div class="card-header">
+    <span class="card-number">015</span>
+    <span class="card-title">Brutalist Heavy</span>
+  </div>
+  <div class="card-desc">Ultra-bold slab forms with raw, unpolished edges. Massive letter weight dominates the frame. Concrete-grey palette channels industrial brutalism — pure structural power.</div>
+  <div class="preview-row">
+    <div class="preview dark">
+      <svg viewBox="0 0 400 110" xmlns="http://www.w3.org/2000/svg">
+        <!-- Massive block letters -->
+        <!-- E -->
+        <rect x="10" y="8" width="26" height="94" fill="#9a9a9a"/>
+        <rect x="10" y="8" width="70" height="22" fill="#9a9a9a"/>
+        <rect x="10" y="44" width="58" height="20" fill="#9a9a9a"/>
+        <rect x="10" y="80" width="70" height="22" fill="#9a9a9a"/>
+        <!-- G -->
+        <rect x="95" y="8" width="70" height="22" fill="#b0b0b0"/>
+        <rect x="95" y="8" width="26" height="94" fill="#b0b0b0"/>
+        <rect x="95" y="80" width="70" height="22" fill="#b0b0b0"/>
+        <rect x="139" y="52" width="26" height="50" fill="#b0b0b0"/>
+        <rect x="125" y="52" width="40" height="18" fill="#b0b0b0"/>
+        <!-- P -->
+        <rect x="185" y="8" width="26" height="94" fill="#9a9a9a"/>
+        <rect x="185" y="8" width="65" height="22" fill="#9a9a9a"/>
+        <rect x="226" y="8" width="24" height="58" fill="#9a9a9a"/>
+        <rect x="185" y="44" width="65" height="22" fill="#9a9a9a"/>
+        <!-- S -->
+        <rect x="275" y="8" width="70" height="22" fill="#b0b0b0"/>
+        <rect x="275" y="8" width="26" height="52" fill="#b0b0b0"/>
+        <rect x="275" y="44" width="70" height="20" fill="#b0b0b0"/>
+        <rect x="319" y="44" width="26" height="58" fill="#b0b0b0"/>
+        <rect x="275" y="80" width="70" height="22" fill="#b0b0b0"/>
+        <!-- Noise texture overlay -->
+        <rect x="0" y="0" width="400" height="110" fill="url(#noise15)" opacity="0.08"/>
+        <defs>
+          <filter id="noise15f">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4"/>
+          </filter>
+          <pattern id="noise15" width="100%" height="100%">
+            <rect width="400" height="110" filter="url(#noise15f)" opacity="0.5"/>
+          </pattern>
+        </defs>
+      </svg>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 400 110" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="8" width="26" height="94" fill="#2a2a2a"/>
+        <rect x="10" y="8" width="70" height="22" fill="#2a2a2a"/>
+        <rect x="10" y="44" width="58" height="20" fill="#2a2a2a"/>
+        <rect x="10" y="80" width="70" height="22" fill="#2a2a2a"/>
+        <rect x="95" y="8" width="70" height="22" fill="#1a1a1a"/>
+        <rect x="95" y="8" width="26" height="94" fill="#1a1a1a"/>
+        <rect x="95" y="80" width="70" height="22" fill="#1a1a1a"/>
+        <rect x="139" y="52" width="26" height="50" fill="#1a1a1a"/>
+        <rect x="125" y="52" width="40" height="18" fill="#1a1a1a"/>
+        <rect x="185" y="8" width="26" height="94" fill="#2a2a2a"/>
+        <rect x="185" y="8" width="65" height="22" fill="#2a2a2a"/>
+        <rect x="226" y="8" width="24" height="58" fill="#2a2a2a"/>
+        <rect x="185" y="44" width="65" height="22" fill="#2a2a2a"/>
+        <rect x="275" y="8" width="70" height="22" fill="#1a1a1a"/>
+        <rect x="275" y="8" width="26" height="52" fill="#1a1a1a"/>
+        <rect x="275" y="44" width="70" height="20" fill="#1a1a1a"/>
+        <rect x="319" y="44" width="26" height="58" fill="#1a1a1a"/>
+        <rect x="275" y="80" width="70" height="22" fill="#1a1a1a"/>
+      </svg>
+    </div>
+  </div>
+</article>
+
+<!-- ============ 16. MODULAR ASSEMBLY ============ -->
+<article class="logo-card">
+  <div class="card-header">
+    <span class="card-number">016</span>
+    <span class="card-title">Modular Assembly</span>
+  </div>
+  <div class="card-desc">Letters built entirely from repeating square units on a grid — like precision-machined components assembled into form. Gaps between modules suggest engineered tolerances.</div>
+  <div class="preview-row">
+    <div class="preview dark">
+      <svg viewBox="0 0 370 100" xmlns="http://www.w3.org/2000/svg">
+        <defs><style>.m{fill:#c7943e;}.m2{fill:#8a9bae;}</style></defs>
+        <!-- Each letter from 10x10 blocks with 2px gap. Grid: 12px pitch -->
+        <!-- E: 5w x 7h -->
+        <g transform="translate(10,8)">
+          <rect class="m" x="0" y="0" width="10" height="10"/>
+          <rect class="m" x="12" y="0" width="10" height="10"/>
+          <rect class="m" x="24" y="0" width="10" height="10"/>
+          <rect class="m" x="36" y="0" width="10" height="10"/>
+          <rect class="m" x="48" y="0" width="10" height="10"/>
+          <rect class="m" x="0" y="12" width="10" height="10"/>
+          <rect class="m" x="0" y="24" width="10" height="10"/>
+          <rect class="m" x="12" y="24" width="10" height="10"/>
+          <rect class="m" x="24" y="24" width="10" height="10"/>
+          <rect class="m" x="36" y="24" width="10" height="10"/>
+          <rect class="m" x="0" y="36" width="10" height="10"/>
+          <rect class="m" x="0" y="48" width="10" height="10"/>
+          <rect class="m" x="0" y="60" width="10" height="10"/>
+          <rect class="m" x="12" y="60" width="10" height="10"/>
+          <rect class="m" x="24" y="60" width="10" height="10"/>
+          <rect class="m" x="36" y="60" width="10" height="10"/>
+          <rect class="m" x="48" y="60" width="10" height="10"/>
+          <rect class="m" x="0" y="72" width="10" height="10"/>
+        </g>
+        <!-- G: 5w x 7h -->
+        <g transform="translate(95,8)">
+          <rect class="m2" x="12" y="0" width="10" height="10"/>
+          <rect class="m2" x="24" y="0" width="10" height="10"/>
+          <rect class="m2" x="36" y="0" width="10" height="10"/>
+          <rect class="m2" x="48" y="0" width="10" height="10"/>
+          <rect class="m2" x="0" y="0" width="10" height="10"/>
+          <rect class="m2" x="0" y="12" width="10" height="10"/>
+          <rect class="m2" x="0" y="24" width="10" height="10"/>
+          <rect class="m2" x="0" y="36" width="10" height="10"/>
+          <rect class="m2" x="0" y="48" width="10" height="10"/>
+          <rect class="m2" x="0" y="60" width="10" height="10"/>
+          <rect class="m2" x="12" y="60" width="10" height="10"/>
+          <rect class="m2" x="24" y="60" width="10" height="10"/>
+          <rect class="m2" x="36" y="60" width="10" height="10"/>
+          <rect class="m2" x="48" y="60" width="10" height="10"/>
+          <rect class="m2" x="48" y="48" width="10" height="10"/>
+          <rect class="m2" x="48" y="36" width="10" height="10"/>
+          <rect class="m2" x="36" y="36" width="10" height="10"/>
+          <rect class="m2" x="24" y="36" width="10" height="10"/>
+          <rect class="m2" x="0" y="72" width="10" height="10"/>
+        </g>
+        <!-- P: 5w x 7h -->
+        <g transform="translate(180,8)">
+          <rect class="m" x="0" y="0" width="10" height="10"/>
+          <rect class="m" x="12" y="0" width="10" height="10"/>
+          <rect class="m" x="24" y="0" width="10" height="10"/>
+          <rect class="m" x="36" y="0" width="10" height="10"/>
+          <rect class="m" x="48" y="0" width="10" height="10"/>
+          <rect class="m" x="0" y="12" width="10" height="10"/>
+          <rect class="m" x="48" y="12" width="10" height="10"/>
+          <rect class="m" x="0" y="24" width="10" height="10"/>
+          <rect class="m" x="12" y="24" width="10" height="10"/>
+          <rect class="m" x="24" y="24" width="10" height="10"/>
+          <rect class="m" x="36" y="24" width="10" height="10"/>
+          <rect class="m" x="48" y="24" width="10" height="10"/>
+          <rect class="m" x="0" y="36" width="10" height="10"/>
+          <rect class="m" x="0" y="48" width="10" height="10"/>
+          <rect class="m" x="0" y="60" width="10" height="10"/>
+          <rect class="m" x="0" y="72" width="10" height="10"/>
+        </g>
+        <!-- S: 5w x 7h -->
+        <g transform="translate(265,8)">
+          <rect class="m2" x="0" y="0" width="10" height="10"/>
+          <rect class="m2" x="12" y="0" width="10" height="10"/>
+          <rect class="m2" x="24" y="0" width="10" height="10"/>
+          <rect class="m2" x="36" y="0" width="10" height="10"/>
+          <rect class="m2" x="48" y="0" width="10" height="10"/>
+          <rect class="m2" x="0" y="12" width="10" height="10"/>
+          <rect class="m2" x="0" y="24" width="10" height="10"/>
+          <rect class="m2" x="12" y="24" width="10" height="10"/>
+          <rect class="m2" x="24" y="24" width="10" height="10"/>
+          <rect class="m2" x="36" y="24" width="10" height="10"/>
+          <rect class="m2" x="48" y="24" width="10" height="10"/>
+          <rect class="m2" x="48" y="36" width="10" height="10"/>
+          <rect class="m2" x="48" y="48" width="10" height="10"/>
+          <rect class="m2" x="0" y="60" width="10" height="10"/>
+          <rect class="m2" x="12" y="60" width="10" height="10"/>
+          <rect class="m2" x="24" y="60" width="10" height="10"/>
+          <rect class="m2" x="36" y="60" width="10" height="10"/>
+          <rect class="m2" x="48" y="60" width="10" height="10"/>
+          <rect class="m2" x="0" y="72" width="10" height="10"/>
+        </g>
+      </svg>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 370 100" xmlns="http://www.w3.org/2000/svg">
+        <defs><style>.ml{fill:#0d2137;}.ml2{fill:#1a3a5c;}</style></defs>
+        <g transform="translate(10,8)">
+          <rect class="ml" x="0" y="0" width="10" height="10"/><rect class="ml" x="12" y="0" width="10" height="10"/><rect class="ml" x="24" y="0" width="10" height="10"/><rect class="ml" x="36" y="0" width="10" height="10"/><rect class="ml" x="48" y="0" width="10" height="10"/>
+          <rect class="ml" x="0" y="12" width="10" height="10"/><rect class="ml" x="0" y="24" width="10" height="10"/><rect class="ml" x="12" y="24" width="10" height="10"/><rect class="ml" x="24" y="24" width="10" height="10"/><rect class="ml" x="36" y="24" width="10" height="10"/>
+          <rect class="ml" x="0" y="36" width="10" height="10"/><rect class="ml" x="0" y="48" width="10" height="10"/>
+          <rect class="ml" x="0" y="60" width="10" height="10"/><rect class="ml" x="12" y="60" width="10" height="10"/><rect class="ml" x="24" y="60" width="10" height="10"/><rect class="ml" x="36" y="60" width="10" height="10"/><rect class="ml" x="48" y="60" width="10" height="10"/>
+          <rect class="ml" x="0" y="72" width="10" height="10"/>
+        </g>
+        <g transform="translate(95,8)">
+          <rect class="ml2" x="0" y="0" width="10" height="10"/><rect class="ml2" x="12" y="0" width="10" height="10"/><rect class="ml2" x="24" y="0" width="10" height="10"/><rect class="ml2" x="36" y="0" width="10" height="10"/><rect class="ml2" x="48" y="0" width="10" height="10"/>
+          <rect class="ml2" x="0" y="12" width="10" height="10"/><rect class="ml2" x="0" y="24" width="10" height="10"/><rect class="ml2" x="0" y="36" width="10" height="10"/><rect class="ml2" x="0" y="48" width="10" height="10"/>
+          <rect class="ml2" x="0" y="60" width="10" height="10"/><rect class="ml2" x="12" y="60" width="10" height="10"/><rect class="ml2" x="24" y="60" width="10" height="10"/><rect class="ml2" x="36" y="60" width="10" height="10"/><rect class="ml2" x="48" y="60" width="10" height="10"/>
+          <rect class="ml2" x="48" y="48" width="10" height="10"/><rect class="ml2" x="48" y="36" width="10" height="10"/><rect class="ml2" x="36" y="36" width="10" height="10"/><rect class="ml2" x="24" y="36" width="10" height="10"/>
+          <rect class="ml2" x="0" y="72" width="10" height="10"/>
+        </g>
+        <g transform="translate(180,8)">
+          <rect class="ml" x="0" y="0" width="10" height="10"/><rect class="ml" x="12" y="0" width="10" height="10"/><rect class="ml" x="24" y="0" width="10" height="10"/><rect class="ml" x="36" y="0" width="10" height="10"/><rect class="ml" x="48" y="0" width="10" height="10"/>
+          <rect class="ml" x="0" y="12" width="10" height="10"/><rect class="ml" x="48" y="12" width="10" height="10"/>
+          <rect class="ml" x="0" y="24" width="10" height="10"/><rect class="ml" x="12" y="24" width="10" height="10"/><rect class="ml" x="24" y="24" width="10" height="10"/><rect class="ml" x="36" y="24" width="10" height="10"/><rect class="ml" x="48" y="24" width="10" height="10"/>
+          <rect class="ml" x="0" y="36" width="10" height="10"/><rect class="ml" x="0" y="48" width="10" height="10"/><rect class="ml" x="0" y="60" width="10" height="10"/><rect class="ml" x="0" y="72" width="10" height="10"/>
+        </g>
+        <g transform="translate(265,8)">
+          <rect class="ml2" x="0" y="0" width="10" height="10"/><rect class="ml2" x="12" y="0" width="10" height="10"/><rect class="ml2" x="24" y="0" width="10" height="10"/><rect class="ml2" x="36" y="0" width="10" height="10"/><rect class="ml2" x="48" y="0" width="10" height="10"/>
+          <rect class="ml2" x="0" y="12" width="10" height="10"/>
+          <rect class="ml2" x="0" y="24" width="10" height="10"/><rect class="ml2" x="12" y="24" width="10" height="10"/><rect class="ml2" x="24" y="24" width="10" height="10"/><rect class="ml2" x="36" y="24" width="10" height="10"/><rect class="ml2" x="48" y="24" width="10" height="10"/>
+          <rect class="ml2" x="48" y="36" width="10" height="10"/><rect class="ml2" x="48" y="48" width="10" height="10"/>
+          <rect class="ml2" x="0" y="60" width="10" height="10"/><rect class="ml2" x="12" y="60" width="10" height="10"/><rect class="ml2" x="24" y="60" width="10" height="10"/><rect class="ml2" x="36" y="60" width="10" height="10"/><rect class="ml2" x="48" y="60" width="10" height="10"/>
+          <rect class="ml2" x="0" y="72" width="10" height="10"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</article>
+
+<!-- ============ 17. HORIZON LINE ============ -->
+<article class="logo-card">
+  <div class="card-header">
+    <span class="card-number">017</span>
+    <span class="card-title">Horizon Line</span>
+  </div>
+  <div class="card-desc">Letters rise from a strong horizontal line — the horizon where sea meets sky. Lower portions fade into reflection below, evoking maritime vistas and Dubai's skyline silhouette.</div>
+  <div class="preview-row">
+    <div class="preview dark">
+      <svg viewBox="0 0 380 130" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="h17fade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e8e4dd" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#e8e4dd" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- Horizon line -->
+        <line x1="10" y1="75" x2="370" y2="75" stroke="#c7943e" stroke-width="1.5"/>
+        <!-- Letters above horizon -->
+        <text x="190" y="70" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="58" fill="#e8e4dd" letter-spacing="0.18em">EGPS</text>
+        <!-- Reflection below -->
+        <g transform="translate(0,150) scale(1,-1)">
+          <text x="190" y="70" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="58" fill="url(#h17fade)" letter-spacing="0.18em">EGPS</text>
+        </g>
+        <!-- Subtle horizon glow -->
+        <rect x="10" y="73" width="360" height="4" fill="#c7943e" opacity="0.08"/>
+        <text x="190" y="122" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#7a7670" letter-spacing="0.3em">EUROGULF POWER SOLUTIONS</text>
+      </svg>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 380 130" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="h17fadeL" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0d2137" stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="#0d2137" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <line x1="10" y1="75" x2="370" y2="75" stroke="#8a6628" stroke-width="1.5"/>
+        <text x="190" y="70" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="58" fill="#0d2137" letter-spacing="0.18em">EGPS</text>
+        <g transform="translate(0,150) scale(1,-1)">
+          <text x="190" y="70" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="58" fill="url(#h17fadeL)" letter-spacing="0.18em">EGPS</text>
+        </g>
+        <rect x="10" y="73" width="360" height="4" fill="#8a6628" opacity="0.06"/>
+        <text x="190" y="122" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="6.5" fill="#7a7670" letter-spacing="0.3em">EUROGULF POWER SOLUTIONS</text>
+      </svg>
+    </div>
+  </div>
+</article>
+
+<!-- ============ 18. PRECISION INSTRUMENT ============ -->
+<article class="logo-card">
+  <div class="card-header">
+    <span class="card-number">018</span>
+    <span class="card-title">Precision Instrument</span>
+  </div>
+  <div class="card-desc">A circular gauge/dial motif frames the monogram. Tick marks, a needle, and concentric rings recall ship engine instruments. Technical legibility meets premium finish.</div>
+  <div class="preview-row">
+    <div class="preview dark">
+      <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g18" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#c7943e"/>
+            <stop offset="100%" stop-color="#8a6628"/>
+          </linearGradient>
+        </defs>
+        <!-- Outer ring -->
+        <circle cx="80" cy="70" r="58" fill="none" stroke="#e8e4dd" stroke-width="1.5"/>
+        <circle cx="80" cy="70" r="52" fill="none" stroke="#e8e4dd" stroke-width="0.5"/>
+        <!-- Tick marks -->
+        <g stroke="#e8e4dd" stroke-width="1">
+          <line x1="80" y1="14" x2="80" y2="22"/>
+          <line x1="80" y1="118" x2="80" y2="126"/>
+          <line x1="22" y1="70" x2="30" y2="70"/>
+          <line x1="130" y1="70" x2="138" y2="70"/>
+          <!-- 45deg ticks -->
+          <line x1="38.8" y1="28.8" x2="44.4" y2="34.4"/>
+          <line x1="121.2" y1="28.8" x2="115.6" y2="34.4"/>
+          <line x1="38.8" y1="111.2" x2="44.4" y2="105.6"/>
+          <line x1="121.2" y1="111.2" x2="115.6" y2="105.6"/>
+        </g>
+        <!-- Minor ticks -->
+        <g stroke="#e8e4dd" stroke-width="0.5" opacity="0.4">
+          <line x1="59" y1="15.5" x2="61" y2="21.5"/>
+          <line x1="101" y1="15.5" x2="99" y2="21.5"/>
+          <line x1="59" y1="124.5" x2="61" y2="118.5"/>
+          <line x1="101" y1="124.5" x2="99" y2="118.5"/>
+        </g>
+        <!-- Needle -->
+        <line x1="80" y1="70" x2="55" y2="32" stroke="url(#g18)" stroke-width="2" stroke-linecap="round">
+          <animateTransform attributeName="transform" type="rotate" from="-20 80 70" to="20 80 70" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1" values="-20 80 70;20 80 70;-20 80 70"/>
+        </line>
+        <circle cx="80" cy="70" r="4" fill="url(#g18)"/>
+        <!-- EGPS in center -->
+        <text x="80" y="88" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="14" fill="#e8e4dd" letter-spacing="0.15em">EGPS</text>
+        <!-- Side text -->
+        <text x="160" y="55" font-family="'Instrument Serif',serif" font-size="28" fill="#e8e4dd">Eurogulf</text>
+        <text x="160" y="78" font-family="'Space Grotesk',sans-serif" font-weight="600" font-size="12" fill="#c7943e" letter-spacing="0.2em">POWER</text>
+        <text x="160" y="95" font-family="'Space Grotesk',sans-serif" font-weight="600" font-size="12" fill="#c7943e" letter-spacing="0.2em">SOLUTIONS</text>
+      </svg>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g18L" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#8a6628"/>
+            <stop offset="100%" stop-color="#c7943e"/>
+          </linearGradient>
+        </defs>
+        <circle cx="80" cy="70" r="58" fill="none" stroke="#0d2137" stroke-width="1.5"/>
+        <circle cx="80" cy="70" r="52" fill="none" stroke="#0d2137" stroke-width="0.5"/>
+        <g stroke="#0d2137" stroke-width="1">
+          <line x1="80" y1="14" x2="80" y2="22"/><line x1="80" y1="118" x2="80" y2="126"/>
+          <line x1="22" y1="70" x2="30" y2="70"/><line x1="130" y1="70" x2="138" y2="70"/>
+          <line x1="38.8" y1="28.8" x2="44.4" y2="34.4"/><line x1="121.2" y1="28.8" x2="115.6" y2="34.4"/>
+          <line x1="38.8" y1="111.2" x2="44.4" y2="105.6"/><line x1="121.2" y1="111.2" x2="115.6" y2="105.6"/>
+        </g>
+        <g stroke="#0d2137" stroke-width="0.5" opacity="0.3">
+          <line x1="59" y1="15.5" x2="61" y2="21.5"/><line x1="101" y1="15.5" x2="99" y2="21.5"/>
+          <line x1="59" y1="124.5" x2="61" y2="118.5"/><line x1="101" y1="124.5" x2="99" y2="118.5"/>
+        </g>
+        <line x1="80" y1="70" x2="55" y2="32" stroke="url(#g18L)" stroke-width="2" stroke-linecap="round">
+          <animateTransform attributeName="transform" type="rotate" from="-20 80 70" to="20 80 70" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1" values="-20 80 70;20 80 70;-20 80 70"/>
+        </line>
+        <circle cx="80" cy="70" r="4" fill="url(#g18L)"/>
+        <text x="80" y="88" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="14" fill="#0d2137" letter-spacing="0.15em">EGPS</text>
+        <text x="160" y="55" font-family="'Instrument Serif',serif" font-size="28" fill="#0d2137">Eurogulf</text>
+        <text x="160" y="78" font-family="'Space Grotesk',sans-serif" font-weight="600" font-size="12" fill="#8a6628" letter-spacing="0.2em">POWER</text>
+        <text x="160" y="95" font-family="'Space Grotesk',sans-serif" font-weight="600" font-size="12" fill="#8a6628" letter-spacing="0.2em">SOLUTIONS</text>
+      </svg>
+    </div>
+  </div>
+</article>
+
+<!-- ============ 19. LAYERED DEPTH ============ -->
+<article class="logo-card">
+  <div class="card-header">
+    <span class="card-number">019</span>
+    <span class="card-title">Layered Depth</span>
+  </div>
+  <div class="card-desc">Three translucent overlapping copies of EGPS — offset diagonally — create depth through color mixing. Suggests multiple layers of engineering expertise and dimensional precision.</div>
+  <div class="preview-row">
+    <div class="preview dark">
+      <svg viewBox="0 0 380 110" xmlns="http://www.w3.org/2000/svg">
+        <!-- Layer 3 (back) -->
+        <text x="190" y="75" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="64" fill="#c7943e" opacity="0.2" letter-spacing="0.12em" transform="translate(8,8)">EGPS</text>
+        <!-- Layer 2 (mid) -->
+        <text x="190" y="75" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="64" fill="#8a9bae" opacity="0.35" letter-spacing="0.12em" transform="translate(4,4)">EGPS</text>
+        <!-- Layer 1 (front) -->
+        <text x="190" y="75" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="64" fill="#e8e4dd" opacity="0.9" letter-spacing="0.12em">EGPS</text>
+      </svg>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 380 110" xmlns="http://www.w3.org/2000/svg">
+        <text x="190" y="75" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="64" fill="#c7943e" opacity="0.15" letter-spacing="0.12em" transform="translate(8,8)">EGPS</text>
+        <text x="190" y="75" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="64" fill="#8a9bae" opacity="0.25" letter-spacing="0.12em" transform="translate(4,4)">EGPS</text>
+        <text x="190" y="75" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="64" fill="#0d2137" opacity="0.9" letter-spacing="0.12em">EGPS</text>
+      </svg>
+    </div>
+  </div>
+</article>
+
+<!-- ============ 20. SIGNATURE BOLD ============ -->
+<article class="logo-card">
+  <div class="card-header">
+    <span class="card-number">020</span>
+    <span class="card-title">Signature Bold</span>
+  </div>
+  <div class="card-desc">Confident, hand-drawn quality with varying stroke weights — as if signed by a master engineer. Controlled imperfection over a precise baseline gives warmth to industrial authority.</div>
+  <div class="preview-row">
+    <div class="preview dark">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sig20" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#e8e4dd"/>
+            <stop offset="100%" stop-color="#c7943e"/>
+          </linearGradient>
+        </defs>
+        <!-- Hand-drawn E -->
+        <path d="M25,20 C26,19 70,18 72,20 C70,22 36,21 34,22 L33,50 C34,49 58,48 60,50 C58,52 35,51 33,52 L32,82 C33,81 72,80 74,82 C72,84 26,83 24,84 L25,20z" fill="none" stroke="url(#sig20)" stroke-width="3" stroke-linecap="round"/>
+        <!-- Hand-drawn G -->
+        <path d="M100,22 C102,18 155,17 158,22 C155,26 120,21 108,24 C104,28 102,75 106,80 C110,84 150,83 152,80 L152,56 C150,54 130,55 128,56" fill="none" stroke="url(#sig20)" stroke-width="3" stroke-linecap="round"/>
+        <!-- Hand-drawn P -->
+        <path d="M180,84 L181,20 C182,19 222,18 225,22 C228,30 226,46 222,50 C218,53 183,52 182,50" fill="none" stroke="url(#sig20)" stroke-width="3" stroke-linecap="round"/>
+        <!-- Hand-drawn S -->
+        <path d="M270,24 C268,18 245,18 242,22 C238,28 240,42 244,48 C248,54 272,56 276,62 C280,70 278,82 272,84 C266,86 242,85 240,82" fill="none" stroke="url(#sig20)" stroke-width="3" stroke-linecap="round"/>
+        <!-- Underline flourish -->
+        <path d="M22,95 C60,92 200,90 290,93" fill="none" stroke="#c7943e" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+        <!-- Tagline -->
+        <text x="310" y="96" font-family="'JetBrains Mono',monospace" font-size="6" fill="#7a7670" letter-spacing="0.15em">EST. DUBAI</text>
+      </svg>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sig20L" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#0d2137"/>
+            <stop offset="100%" stop-color="#1a3a5c"/>
+          </linearGradient>
+        </defs>
+        <path d="M25,20 C26,19 70,18 72,20 C70,22 36,21 34,22 L33,50 C34,49 58,48 60,50 C58,52 35,51 33,52 L32,82 C33,81 72,80 74,82 C72,84 26,83 24,84 L25,20z" fill="none" stroke="url(#sig20L)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M100,22 C102,18 155,17 158,22 C155,26 120,21 108,24 C104,28 102,75 106,80 C110,84 150,83 152,80 L152,56 C150,54 130,55 128,56" fill="none" stroke="url(#sig20L)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M180,84 L181,20 C182,19 222,18 225,22 C228,30 226,46 222,50 C218,53 183,52 182,50" fill="none" stroke="url(#sig20L)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M270,24 C268,18 245,18 242,22 C238,28 240,42 244,48 C248,54 272,56 276,62 C280,70 278,82 272,84 C266,86 242,85 240,82" fill="none" stroke="url(#sig20L)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M22,95 C60,92 200,90 290,93" fill="none" stroke="#8a6628" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+        <text x="310" y="96" font-family="'JetBrains Mono',monospace" font-size="6" fill="#7a7670" letter-spacing="0.15em">EST. DUBAI</text>
+      </svg>
+    </div>
+  </div>
+</article>
+
+</main>
+
+<footer class="footer">
+  EGPS &middot; Eurogulf Power Solutions &middot; Logo Concepts Batch 2 &middot; Confidential
+</footer>
+
+</body>
+</html>

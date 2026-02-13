@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EGPS — Logo Variants Batch 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0b0d;
+    --bg-card: #111216;
+    --bg-light-card: #f4f3f0;
+    --text-primary: #e8e6e1;
+    --text-muted: #6b6a67;
+    --accent: #c9a84c;
+    --accent-dim: #8a7234;
+    --border: #1e1f24;
+    --navy: #0c1a2e;
+    --steel: #4a5568;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .noise {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px;
+  }
+
+  header {
+    padding: 60px 40px 40px;
+    border-bottom: 1px solid var(--border);
+    position: relative; z-index: 1;
+    animation: fadeDown 0.8s ease-out;
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  header .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+  }
+
+  header h1 em { font-style: italic; color: var(--accent); }
+
+  header .sub {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 8px;
+    font-weight: 300;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 2px;
+    position: relative; z-index: 1;
+  }
+
+  .variant {
+    border-bottom: 1px solid var(--border);
+    padding: 48px 40px;
+    animation: fadeUp 0.6s ease-out both;
+  }
+
+  .variant:nth-child(1) { animation-delay: 0.1s; }
+  .variant:nth-child(2) { animation-delay: 0.15s; }
+  .variant:nth-child(3) { animation-delay: 0.2s; }
+  .variant:nth-child(4) { animation-delay: 0.25s; }
+  .variant:nth-child(5) { animation-delay: 0.3s; }
+  .variant:nth-child(6) { animation-delay: 0.35s; }
+  .variant:nth-child(7) { animation-delay: 0.4s; }
+  .variant:nth-child(8) { animation-delay: 0.45s; }
+  .variant:nth-child(9) { animation-delay: 0.5s; }
+  .variant:nth-child(10) { animation-delay: 0.55s; }
+
+  .variant-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  .variant-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent-dim);
+    letter-spacing: 2px;
+  }
+
+  .variant-title {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .variant-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 300;
+    max-width: 700px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+
+  .previews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 1000px;
+  }
+
+  .preview {
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .preview.dark {
+    background: #0c0d10;
+    border: 1px solid #1a1b20;
+  }
+
+  .preview.light {
+    background: #f4f3f0;
+    border: 1px solid #e0ddd6;
+  }
+
+  .preview svg {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+  }
+
+  .preview-label {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.3;
+  }
+
+  .preview.dark .preview-label { color: #fff; }
+  .preview.light .preview-label { color: #000; }
+
+  footer {
+    padding: 40px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 1px;
+    position: relative; z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    .previews { grid-template-columns: 1fr; }
+    header { padding: 40px 20px 30px; }
+    .variant { padding: 32px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="noise"></div>
+
+<header>
+  <div class="tag">Eurogulf Power Solutions</div>
+  <h1>Logo Exploration — <em>Batch 1</em></h1>
+  <div class="sub">Variants 01–10 &middot; Typographic & Iconographic Directions</div>
+</header>
+
+<div class="grid">
+
+<!-- ============================================================ -->
+<!-- VARIANT 01: BSS Echo -->
+<!-- ============================================================ -->
+<div class="variant">
+  <div class="variant-header">
+    <span class="variant-num">01</span>
+    <span class="variant-title">BSS Echo</span>
+  </div>
+  <p class="variant-desc">Direct evolution of the parent BSS identity. Horizontal scan-lines slice through bold geometric letterforms, creating the same venetian-blind rhythm while establishing EGPS as its own entity.</p>
+  <div class="previews">
+    <div class="preview dark">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="scanlines1" patternUnits="userSpaceOnUse" width="400" height="6">
+            <rect width="400" height="3.5" fill="white"/>
+            <rect y="3.5" width="400" height="2.5" fill="transparent"/>
+          </pattern>
+          <clipPath id="egps1">
+            <!-- E -->
+            <rect x="10" y="15" width="70" height="90"/>
+            <rect x="10" y="15" width="70" height="16" rx="0"/>
+            <rect x="10" y="52" width="55" height="16"/>
+            <rect x="10" y="89" width="70" height="16"/>
+            <rect x="10" y="15" width="18" height="90"/>
+            <!-- G -->
+            <path d="M105,60 C105,33 125,15 155,15 L175,15 L175,31 L155,31 C136,31 123,42 123,60 C123,78 136,89 155,89 L160,89 L160,68 L175,68 L175,105 L155,105 C125,105 105,87 105,60Z"/>
+            <!-- P -->
+            <rect x="200" y="15" width="18" height="90"/>
+            <path d="M200,15 L245,15 C265,15 278,28 278,46 C278,64 265,77 245,77 L218,77 L218,61 L242,61 C254,61 260,55 260,46 C260,37 254,31 242,31 L200,31Z"/>
+            <!-- S -->
+            <path d="M300,31 L300,15 L360,15 L360,31 L318,31 C312,31 308,35 308,40 C308,45 312,49 318,49 L345,49 C362,49 372,60 372,75 C372,92 362,105 342,105 L295,105 L295,89 L340,89 C348,89 354,84 354,75 C354,67 348,63 340,63 L318,63 C302,63 292,53 292,40 C292,35 294,32 300,31Z"/>
+          </clipPath>
+        </defs>
+        <rect width="400" height="120" clip-path="url(#egps1)" fill="url(#scanlines1)"/>
+      </svg>
+      <span class="preview-label">Dark</span>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="scanlines1b" patternUnits="userSpaceOnUse" width="400" height="6">
+            <rect width="400" height="3.5" fill="#0c0d10"/>
+            <rect y="3.5" width="400" height="2.5" fill="transparent"/>
+          </pattern>
+        </defs>
+        <rect width="400" height="120" clip-path="url(#egps1)" fill="url(#scanlines1b)"/>
+      </svg>
+      <span class="preview-label">Light</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- VARIANT 02: Geometric Blocks -->
+<!-- ============================================================ -->
+<div class="variant">
+  <div class="variant-header">
+    <span class="variant-num">02</span>
+    <span class="variant-title">Geometric Blocks</span>
+  </div>
+  <p class="variant-desc">Letters built from a strict modular grid of squares and rectangles. Each character reduced to its most essential geometric components — industrial, systematic, unmistakably engineered.</p>
+  <div class="previews">
+    <div class="preview dark">
+      <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+        <g fill="white">
+          <!-- E: 3 horizontal bars + vertical -->
+          <rect x="20" y="10" width="12" height="80"/>
+          <rect x="20" y="10" width="60" height="12"/>
+          <rect x="20" y="44" width="48" height="12"/>
+          <rect x="20" y="78" width="60" height="12"/>
+          <!-- G: U shape + horizontal tab -->
+          <rect x="108" y="10" width="60" height="12"/>
+          <rect x="108" y="10" width="12" height="80"/>
+          <rect x="108" y="78" width="60" height="12"/>
+          <rect x="156" y="50" width="12" height="40"/>
+          <rect x="140" y="50" width="28" height="12"/>
+          <!-- P: vertical + top box -->
+          <rect x="196" y="10" width="12" height="80"/>
+          <rect x="196" y="10" width="60" height="12"/>
+          <rect x="244" y="10" width="12" height="40"/>
+          <rect x="196" y="38" width="60" height="12"/>
+          <!-- S: two offset rectangles -->
+          <rect x="284" y="10" width="60" height="12"/>
+          <rect x="284" y="10" width="12" height="40"/>
+          <rect x="284" y="38" width="60" height="12"/>
+          <rect x="332" y="38" width="12" height="40" />
+          <rect x="284" y="78" width="60" height="12"/>
+          <rect x="284" y="66" width="12" height="12"/>
+          <rect x="332" y="22" width="12" height="12"/>
+        </g>
+        <text x="200" y="99" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="7" fill="#4a5568" letter-spacing="6">EUROGULF POWER SOLUTIONS</text>
+      </svg>
+      <span class="preview-label">Dark</span>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#0c1a2e">
+          <rect x="20" y="10" width="12" height="80"/>
+          <rect x="20" y="10" width="60" height="12"/>
+          <rect x="20" y="44" width="48" height="12"/>
+          <rect x="20" y="78" width="60" height="12"/>
+          <rect x="108" y="10" width="60" height="12"/>
+          <rect x="108" y="10" width="12" height="80"/>
+          <rect x="108" y="78" width="60" height="12"/>
+          <rect x="156" y="50" width="12" height="40"/>
+          <rect x="140" y="50" width="28" height="12"/>
+          <rect x="196" y="10" width="12" height="80"/>
+          <rect x="196" y="10" width="60" height="12"/>
+          <rect x="244" y="10" width="12" height="40"/>
+          <rect x="196" y="38" width="60" height="12"/>
+          <rect x="284" y="10" width="60" height="12"/>
+          <rect x="284" y="10" width="12" height="40"/>
+          <rect x="284" y="38" width="60" height="12"/>
+          <rect x="332" y="38" width="12" height="40"/>
+          <rect x="284" y="78" width="60" height="12"/>
+          <rect x="284" y="66" width="12" height="12"/>
+          <rect x="332" y="22" width="12" height="12"/>
+        </g>
+        <text x="200" y="99" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="7" fill="#999" letter-spacing="6">EUROGULF POWER SOLUTIONS</text>
+      </svg>
+      <span class="preview-label">Light</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- VARIANT 03: Stencil Industrial -->
+<!-- ============================================================ -->
+<div class="variant">
+  <div class="variant-header">
+    <span class="variant-num">03</span>
+    <span class="variant-title">Stencil Industrial</span>
+  </div>
+  <p class="variant-desc">Military-grade stencil cuts break each letter into segments — evoking shipping crates, engine blocks, and heavy industry. The gaps create visual rhythm while maintaining legibility.</p>
+  <div class="previews">
+    <div class="preview dark">
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#e8e6e1">
+          <!-- E stencil -->
+          <rect x="15" y="10" width="14" height="35"/>
+          <rect x="15" y="55" width="14" height="35"/>
+          <rect x="29" y="10" width="50" height="14"/>
+          <rect x="29" y="43" width="38" height="14"/>
+          <rect x="29" y="76" width="50" height="14"/>
+          <!-- G stencil -->
+          <rect x="100" y="10" width="60" height="14"/>
+          <rect x="100" y="10" width="14" height="35"/>
+          <rect x="100" y="55" width="14" height="35"/>
+          <rect x="100" y="76" width="60" height="14"/>
+          <rect x="146" y="55" width="14" height="35"/>
+          <rect x="130" y="45" width="30" height="14"/>
+          <!-- P stencil -->
+          <rect x="185" y="10" width="14" height="35"/>
+          <rect x="185" y="55" width="14" height="35"/>
+          <rect x="199" y="10" width="50" height="14"/>
+          <rect x="235" y="24" width="14" height="18"/>
+          <rect x="199" y="38" width="50" height="14"/>
+          <!-- S stencil -->
+          <rect x="274" y="10" width="60" height="14"/>
+          <rect x="274" y="24" width="14" height="18"/>
+          <rect x="274" y="42" width="60" height="14"/>
+          <rect x="320" y="56" width="14" height="20"/>
+          <rect x="274" y="76" width="60" height="14"/>
+        </g>
+        <line x1="15" y1="96" x2="348" y2="96" stroke="#c9a84c" stroke-width="2"/>
+      </svg>
+      <span class="preview-label">Dark</span>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 420 100" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#1a1a1a">
+          <rect x="15" y="10" width="14" height="35"/>
+          <rect x="15" y="55" width="14" height="35"/>
+          <rect x="29" y="10" width="50" height="14"/>
+          <rect x="29" y="43" width="38" height="14"/>
+          <rect x="29" y="76" width="50" height="14"/>
+          <rect x="100" y="10" width="60" height="14"/>
+          <rect x="100" y="10" width="14" height="35"/>
+          <rect x="100" y="55" width="14" height="35"/>
+          <rect x="100" y="76" width="60" height="14"/>
+          <rect x="146" y="55" width="14" height="35"/>
+          <rect x="130" y="45" width="30" height="14"/>
+          <rect x="185" y="10" width="14" height="35"/>
+          <rect x="185" y="55" width="14" height="35"/>
+          <rect x="199" y="10" width="50" height="14"/>
+          <rect x="235" y="24" width="14" height="18"/>
+          <rect x="199" y="38" width="50" height="14"/>
+          <rect x="274" y="10" width="60" height="14"/>
+          <rect x="274" y="24" width="14" height="18"/>
+          <rect x="274" y="42" width="60" height="14"/>
+          <rect x="320" y="56" width="14" height="20"/>
+          <rect x="274" y="76" width="60" height="14"/>
+        </g>
+        <line x1="15" y1="96" x2="348" y2="96" stroke="#c9a84c" stroke-width="2"/>
+      </svg>
+      <span class="preview-label">Light</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- VARIANT 04: Minimal Mark -->
+<!-- ============================================================ -->
+<div class="variant">
+  <div class="variant-header">
+    <span class="variant-num">04</span>
+    <span class="variant-title">Minimal Mark</span>
+  </div>
+  <p class="variant-desc">Ultra-clean precision typography with generous letter-spacing. Thin strokes and mathematical proportions convey Swiss-school clarity — letting the name speak without ornament.</p>
+  <div class="previews">
+    <div class="preview dark">
+      <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="white" stroke-width="2.5">
+          <!-- E thin -->
+          <polyline points="72,20 30,20 30,80 72,80"/>
+          <line x1="30" y1="50" x2="62" y2="50"/>
+          <!-- G thin -->
+          <path d="M168,28 C160,22 152,20 142,20 C124,20 112,33 112,50 C112,67 124,80 142,80 C155,80 164,74 168,65 L168,55 L148,55"/>
+          <!-- P thin -->
+          <path d="M198,80 L198,20 L230,20 C244,20 252,28 252,38 C252,48 244,56 230,56 L198,56"/>
+          <!-- S thin -->
+          <path d="M350,26 C345,22 337,20 328,20 C314,20 304,27 304,37 C304,47 312,52 326,54 C340,56 350,61 350,72 C350,80 342,86 328,86 C316,86 308,82 302,76"/>
+        </g>
+        <line x1="30" y1="92" x2="350" y2="92" stroke="#333" stroke-width="0.5"/>
+        <text x="190" y="98" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="5.5" fill="#555" letter-spacing="8">EUROGULF POWER SOLUTIONS</text>
+      </svg>
+      <span class="preview-label">Dark</span>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="#111" stroke-width="2.5">
+          <polyline points="72,20 30,20 30,80 72,80"/>
+          <line x1="30" y1="50" x2="62" y2="50"/>
+          <path d="M168,28 C160,22 152,20 142,20 C124,20 112,33 112,50 C112,67 124,80 142,80 C155,80 164,74 168,65 L168,55 L148,55"/>
+          <path d="M198,80 L198,20 L230,20 C244,20 252,28 252,38 C252,48 244,56 230,56 L198,56"/>
+          <path d="M350,26 C345,22 337,20 328,20 C314,20 304,27 304,37 C304,47 312,52 326,54 C340,56 350,61 350,72 C350,80 342,86 328,86 C316,86 308,82 302,76"/>
+        </g>
+        <line x1="30" y1="92" x2="350" y2="92" stroke="#ccc" stroke-width="0.5"/>
+        <text x="190" y="98" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="5.5" fill="#999" letter-spacing="8">EUROGULF POWER SOLUTIONS</text>
+      </svg>
+      <span class="preview-label">Light</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- VARIANT 05: Dynamic Power -->
+<!-- ============================================================ -->
+<div class="variant">
+  <div class="variant-header">
+    <span class="variant-num">05</span>
+    <span class="variant-title">Dynamic Power</span>
+  </div>
+  <p class="variant-desc">Italicized forms with sharp angular cuts suggest turbine blades in motion. A diagonal energy line sweeps through the composition — power, speed, engineering momentum.</p>
+  <div class="previews">
+    <div class="preview dark">
+      <svg viewBox="0 0 440 110" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="powergrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#c9a84c"/>
+            <stop offset="100%" stop-color="#e8d89c"/>
+          </linearGradient>
+        </defs>
+        <!-- Dynamic sweep line -->
+        <line x1="5" y1="90" x2="435" y2="20" stroke="url(#powergrad)" stroke-width="1.5" opacity="0.4"/>
+        <g fill="white">
+          <!-- E italic/angular -->
+          <polygon points="40,15 100,15 96,27 56,27 50,50 82,50 78,62 46,62 40,85 100,85 96,97 28,97"/>
+          <!-- G italic -->
+          <path d="M140,15 L200,15 L196,27 L154,27 C144,27 138,38 138,55 C138,72 146,83 158,83 L170,83 L174,65 L156,65 L160,53 L196,53 L186,97 L148,97 C126,97 118,78 118,55 C118,32 128,15 140,15Z"/>
+          <!-- P italic -->
+          <polygon points="230,15 230,97 242,97 246,62 274,62 C282,62 290,52 290,38 C290,24 282,15 270,15"/>
+          <path d="M242,27 L268,27 C274,27 278,31 278,38 C278,45 274,50 268,50 L246,50Z" fill="white"/>
+          <!-- S italic -->
+          <path d="M330,15 L390,15 L386,27 L342,27 C336,27 332,31 332,37 C332,43 336,46 344,48 L368,53 C382,56 390,66 390,78 C390,90 380,97 364,97 L308,97 L312,85 L362,85 C370,85 376,80 376,74 C376,68 372,64 362,62 L340,57 C326,54 320,44 320,34 C320,22 328,15 330,15Z"/>
+        </g>
+      </svg>
+      <span class="preview-label">Dark</span>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 440 110" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="powergrad2" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#8a7234"/>
+            <stop offset="100%" stop-color="#c9a84c"/>
+          </linearGradient>
+        </defs>
+        <line x1="5" y1="90" x2="435" y2="20" stroke="url(#powergrad2)" stroke-width="1.5" opacity="0.4"/>
+        <g fill="#0c1a2e">
+          <polygon points="40,15 100,15 96,27 56,27 50,50 82,50 78,62 46,62 40,85 100,85 96,97 28,97"/>
+          <path d="M140,15 L200,15 L196,27 L154,27 C144,27 138,38 138,55 C138,72 146,83 158,83 L170,83 L174,65 L156,65 L160,53 L196,53 L186,97 L148,97 C126,97 118,78 118,55 C118,32 128,15 140,15Z"/>
+          <polygon points="230,15 230,97 242,97 246,62 274,62 C282,62 290,52 290,38 C290,24 282,15 270,15"/>
+          <path d="M242,27 L268,27 C274,27 278,31 278,38 C278,45 274,50 268,50 L246,50Z" fill="#0c1a2e"/>
+          <path d="M330,15 L390,15 L386,27 L342,27 C336,27 332,31 332,37 C332,43 336,46 344,48 L368,53 C382,56 390,66 390,78 C390,90 380,97 364,97 L308,97 L312,85 L362,85 C370,85 376,80 376,74 C376,68 372,64 362,62 L340,57 C326,54 320,44 320,34 C320,22 328,15 330,15Z"/>
+        </g>
+      </svg>
+      <span class="preview-label">Light</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- VARIANT 06: Gulf Luxury -->
+<!-- ============================================================ -->
+<div class="variant">
+  <div class="variant-header">
+    <span class="variant-num">06</span>
+    <span class="variant-title">Gulf Luxury</span>
+  </div>
+  <p class="variant-desc">Refined serif letterforms with gold accents position EGPS in Dubai's premium market. Elegant weight distribution and a subtle gold rule line communicate wealth, trust, and establishment.</p>
+  <div class="previews">
+    <div class="preview dark" style="background: #0c1a2e;">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gold1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e8d89c"/>
+            <stop offset="50%" stop-color="#c9a84c"/>
+            <stop offset="100%" stop-color="#a07830"/>
+          </linearGradient>
+        </defs>
+        <!-- Decorative top/bottom rules -->
+        <line x1="60" y1="18" x2="340" y2="18" stroke="url(#gold1)" stroke-width="0.8"/>
+        <line x1="60" y1="100" x2="340" y2="100" stroke="url(#gold1)" stroke-width="0.8"/>
+        <!-- EGPS in serif style -->
+        <text x="200" y="76" text-anchor="middle" font-family="'Playfair Display',serif" font-size="58" font-weight="700" fill="url(#gold1)" letter-spacing="12">EGPS</text>
+        <text x="200" y="114" text-anchor="middle" font-family="'Playfair Display',serif" font-size="8" fill="#c9a84c" letter-spacing="6" font-style="italic" opacity="0.7">Eurogulf Power Solutions</text>
+        <!-- Small diamond accent -->
+        <rect x="197" y="5" width="6" height="6" fill="#c9a84c" transform="rotate(45,200,8)" opacity="0.6"/>
+      </svg>
+      <span class="preview-label">Dark</span>
+    </div>
+    <div class="preview light" style="background: #faf8f2;">
+      <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gold2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#8a7234"/>
+            <stop offset="50%" stop-color="#6b5620"/>
+            <stop offset="100%" stop-color="#4a3a10"/>
+          </linearGradient>
+        </defs>
+        <line x1="60" y1="18" x2="340" y2="18" stroke="url(#gold2)" stroke-width="0.8"/>
+        <line x1="60" y1="100" x2="340" y2="100" stroke="url(#gold2)" stroke-width="0.8"/>
+        <text x="200" y="76" text-anchor="middle" font-family="'Playfair Display',serif" font-size="58" font-weight="700" fill="url(#gold2)" letter-spacing="12">EGPS</text>
+        <text x="200" y="114" text-anchor="middle" font-family="'Playfair Display',serif" font-size="8" fill="#6b5620" letter-spacing="6" font-style="italic" opacity="0.7">Eurogulf Power Solutions</text>
+        <rect x="197" y="5" width="6" height="6" fill="#8a7234" transform="rotate(45,200,8)" opacity="0.6"/>
+      </svg>
+      <span class="preview-label">Light</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- VARIANT 07: Technical Blueprint -->
+<!-- ============================================================ -->
+<div class="variant">
+  <div class="variant-header">
+    <span class="variant-num">07</span>
+    <span class="variant-title">Technical Blueprint</span>
+  </div>
+  <p class="variant-desc">Engineering drawing aesthetic — letters rendered as if on a technical blueprint with construction lines, dimension markers, and a measured precision that reflects EGPS's engineering DNA.</p>
+  <div class="previews">
+    <div class="preview dark" style="background: #0a1628;">
+      <svg viewBox="0 0 420 130" xmlns="http://www.w3.org/2000/svg">
+        <!-- Grid lines -->
+        <defs>
+          <pattern id="bpgrid" patternUnits="userSpaceOnUse" width="20" height="20">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1a3050" stroke-width="0.3"/>
+          </pattern>
+        </defs>
+        <rect width="420" height="130" fill="url(#bpgrid)"/>
+        <!-- Letters in blueprint style -->
+        <g fill="none" stroke="#4a9eff" stroke-width="1.8" stroke-linecap="square">
+          <!-- E -->
+          <polyline points="80,25 30,25 30,95 80,95"/>
+          <line x1="30" y1="60" x2="68" y2="60"/>
+          <!-- G -->
+          <path d="M170,32 C162,26 153,25 143,25 C123,25 110,40 110,60 C110,80 123,95 143,95 C158,95 168,88 172,78 L172,65 L150,65"/>
+          <!-- P -->
+          <path d="M200,95 L200,25 L240,25 C256,25 266,35 266,48 C266,61 256,70 240,70 L200,70"/>
+          <!-- S -->
+          <path d="M360,32 C354,27 344,25 334,25 C318,25 306,33 306,44 C306,55 316,60 330,63 C344,66 354,71 354,82 C354,92 344,100 330,100 C316,100 306,94 300,86"/>
+        </g>
+        <!-- Dimension lines -->
+        <g stroke="#4a9eff" stroke-width="0.4" opacity="0.5">
+          <line x1="30" y1="105" x2="80" y2="105"/>
+          <line x1="30" y1="102" x2="30" y2="108"/>
+          <line x1="80" y1="102" x2="80" y2="108"/>
+          <text x="55" y="113" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="5" fill="#4a9eff">50</text>
+        </g>
+        <!-- Title block -->
+        <rect x="280" y="108" width="130" height="18" fill="none" stroke="#4a9eff" stroke-width="0.5" opacity="0.5"/>
+        <text x="345" y="120" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="5.5" fill="#4a9eff" opacity="0.7">EUROGULF POWER SOLUTIONS</text>
+      </svg>
+      <span class="preview-label">Dark</span>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 420 130" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="bpgrid2" patternUnits="userSpaceOnUse" width="20" height="20">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#d0d8e0" stroke-width="0.3"/>
+          </pattern>
+        </defs>
+        <rect width="420" height="130" fill="url(#bpgrid2)"/>
+        <g fill="none" stroke="#1a5aa0" stroke-width="1.8" stroke-linecap="square">
+          <polyline points="80,25 30,25 30,95 80,95"/>
+          <line x1="30" y1="60" x2="68" y2="60"/>
+          <path d="M170,32 C162,26 153,25 143,25 C123,25 110,40 110,60 C110,80 123,95 143,95 C158,95 168,88 172,78 L172,65 L150,65"/>
+          <path d="M200,95 L200,25 L240,25 C256,25 266,35 266,48 C266,61 256,70 240,70 L200,70"/>
+          <path d="M360,32 C354,27 344,25 334,25 C318,25 306,33 306,44 C306,55 316,60 330,63 C344,66 354,71 354,82 C354,92 344,100 330,100 C316,100 306,94 300,86"/>
+        </g>
+        <g stroke="#1a5aa0" stroke-width="0.4" opacity="0.5">
+          <line x1="30" y1="105" x2="80" y2="105"/>
+          <line x1="30" y1="102" x2="30" y2="108"/>
+          <line x1="80" y1="102" x2="80" y2="108"/>
+          <text x="55" y="113" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="5" fill="#1a5aa0">50</text>
+        </g>
+        <rect x="280" y="108" width="130" height="18" fill="none" stroke="#1a5aa0" stroke-width="0.5" opacity="0.5"/>
+        <text x="345" y="120" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="5.5" fill="#1a5aa0" opacity="0.7">EUROGULF POWER SOLUTIONS</text>
+      </svg>
+      <span class="preview-label">Light</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- VARIANT 08: Interlocking -->
+<!-- ============================================================ -->
+<div class="variant">
+  <div class="variant-header">
+    <span class="variant-num">08</span>
+    <span class="variant-title">Interlocking</span>
+  </div>
+  <p class="variant-desc">Letters mechanically connect and overlap — shared strokes, dovetail joints, interlocking forms. Echoes BSS's slight letter overlap while evolving it into a more engineered interplay.</p>
+  <div class="previews">
+    <div class="preview dark">
+      <svg viewBox="0 0 360 100" xmlns="http://www.w3.org/2000/svg">
+        <g fill="white">
+          <!-- E - shares right edge with G -->
+          <rect x="15" y="12" width="16" height="76"/>
+          <rect x="31" y="12" width="52" height="14"/>
+          <rect x="31" y="43" width="40" height="14"/>
+          <rect x="31" y="74" width="52" height="14"/>
+          <!-- G - overlaps E, shares with P -->
+          <rect x="75" y="12" width="50" height="14" opacity="0.85"/>
+          <rect x="75" y="12" width="16" height="76" opacity="0.85"/>
+          <rect x="75" y="74" width="56" height="14" opacity="0.85"/>
+          <rect x="115" y="50" width="16" height="38" opacity="0.85"/>
+          <rect x="103" y="50" width="28" height="14" opacity="0.85"/>
+          <!-- P - overlaps G -->
+          <rect x="140" y="12" width="16" height="76"/>
+          <rect x="156" y="12" width="50" height="14"/>
+          <rect x="192" y="12" width="14" height="34"/>
+          <rect x="156" y="32" width="50" height="14"/>
+          <!-- S - overlaps P -->
+          <rect x="200" y="12" width="60" height="14" opacity="0.85"/>
+          <rect x="200" y="12" width="14" height="38" opacity="0.85"/>
+          <rect x="200" y="36" width="60" height="14" opacity="0.85"/>
+          <rect x="246" y="36" width="14" height="38" opacity="0.85"/>
+          <rect x="200" y="74" width="60" height="14" opacity="0.85"/>
+        </g>
+        <!-- Overlap highlight lines -->
+        <line x1="75" y1="8" x2="75" y2="92" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+        <line x1="140" y1="8" x2="140" y2="92" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+        <line x1="200" y1="8" x2="200" y2="92" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+      </svg>
+      <span class="preview-label">Dark</span>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 360 100" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#0c1a2e">
+          <rect x="15" y="12" width="16" height="76"/>
+          <rect x="31" y="12" width="52" height="14"/>
+          <rect x="31" y="43" width="40" height="14"/>
+          <rect x="31" y="74" width="52" height="14"/>
+          <rect x="75" y="12" width="50" height="14" opacity="0.7"/>
+          <rect x="75" y="12" width="16" height="76" opacity="0.7"/>
+          <rect x="75" y="74" width="56" height="14" opacity="0.7"/>
+          <rect x="115" y="50" width="16" height="38" opacity="0.7"/>
+          <rect x="103" y="50" width="28" height="14" opacity="0.7"/>
+          <rect x="140" y="12" width="16" height="76"/>
+          <rect x="156" y="12" width="50" height="14"/>
+          <rect x="192" y="12" width="14" height="34"/>
+          <rect x="156" y="32" width="50" height="14"/>
+          <rect x="200" y="12" width="60" height="14" opacity="0.7"/>
+          <rect x="200" y="12" width="14" height="38" opacity="0.7"/>
+          <rect x="200" y="36" width="60" height="14" opacity="0.7"/>
+          <rect x="246" y="36" width="14" height="38" opacity="0.7"/>
+          <rect x="200" y="74" width="60" height="14" opacity="0.7"/>
+        </g>
+        <line x1="75" y1="8" x2="75" y2="92" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+        <line x1="140" y1="8" x2="140" y2="92" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+        <line x1="200" y1="8" x2="200" y2="92" stroke="#c9a84c" stroke-width="0.5" opacity="0.4"/>
+      </svg>
+      <span class="preview-label">Light</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- VARIANT 09: Negative Space -->
+<!-- ============================================================ -->
+<div class="variant">
+  <div class="variant-header">
+    <span class="variant-num">09</span>
+    <span class="variant-title">Negative Space</span>
+  </div>
+  <p class="variant-desc">Letters carved from a solid field — the background defines the forms. A turbine/gear blade shape is hidden in the negative space between the E and G, rewarding closer inspection.</p>
+  <div class="previews">
+    <div class="preview dark">
+      <svg viewBox="0 0 400 110" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <mask id="negmask">
+            <rect width="400" height="110" fill="white"/>
+            <!-- Cut out the letters -->
+            <!-- E -->
+            <rect x="25" y="15" width="14" height="80" fill="black"/>
+            <rect x="39" y="15" width="45" height="12" fill="black"/>
+            <rect x="39" y="49" width="34" height="12" fill="black"/>
+            <rect x="39" y="83" width="45" height="12" fill="black"/>
+            <!-- Hidden blade shape between E and G -->
+            <path d="M88,55 L96,35 L100,55 L96,75 Z" fill="black" opacity="0.8"/>
+            <!-- G -->
+            <path d="M115,15 L170,15 L170,27 L129,27 C120,27 115,38 115,55 C115,72 120,83 129,83 L148,83 L148,62 L165,62 L165,95 L129,95 C108,95 100,76 100,55 C100,34 108,15 115,15Z" fill="black"/>
+            <!-- P -->
+            <rect x="185" y="15" width="14" height="80" fill="black"/>
+            <rect x="199" y="15" width="42" height="12" fill="black"/>
+            <rect x="229" y="27" width="12" height="20" fill="black"/>
+            <rect x="199" y="35" width="42" height="12" fill="black"/>
+            <!-- S -->
+            <path d="M270,15 L330,15 L330,27 L284,27 C278,27 274,32 274,38 C274,44 278,48 286,48 L314,48 C328,48 336,58 336,72 C336,86 326,95 312,95 L264,95 L264,83 L310,83 C318,83 322,78 322,72 C322,66 318,62 310,62 L284,62 C270,62 260,52 260,38 C260,24 268,15 270,15Z" fill="black"/>
+          </mask>
+        </defs>
+        <rect width="400" height="110" fill="#e8e6e1" mask="url(#negmask)" rx="4"/>
+      </svg>
+      <span class="preview-label">Dark</span>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 400 110" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <mask id="negmask2">
+            <rect width="400" height="110" fill="white"/>
+            <rect x="25" y="15" width="14" height="80" fill="black"/>
+            <rect x="39" y="15" width="45" height="12" fill="black"/>
+            <rect x="39" y="49" width="34" height="12" fill="black"/>
+            <rect x="39" y="83" width="45" height="12" fill="black"/>
+            <path d="M88,55 L96,35 L100,55 L96,75 Z" fill="black" opacity="0.8"/>
+            <path d="M115,15 L170,15 L170,27 L129,27 C120,27 115,38 115,55 C115,72 120,83 129,83 L148,83 L148,62 L165,62 L165,95 L129,95 C108,95 100,76 100,55 C100,34 108,15 115,15Z" fill="black"/>
+            <rect x="185" y="15" width="14" height="80" fill="black"/>
+            <rect x="199" y="15" width="42" height="12" fill="black"/>
+            <rect x="229" y="27" width="12" height="20" fill="black"/>
+            <rect x="199" y="35" width="42" height="12" fill="black"/>
+            <path d="M270,15 L330,15 L330,27 L284,27 C278,27 274,32 274,38 C274,44 278,48 286,48 L314,48 C328,48 336,58 336,72 C336,86 326,95 312,95 L264,95 L264,83 L310,83 C318,83 322,78 322,72 C322,66 318,62 310,62 L284,62 C270,62 260,52 260,38 C260,24 268,15 270,15Z" fill="black"/>
+          </mask>
+        </defs>
+        <rect width="400" height="110" fill="#0c1a2e" mask="url(#negmask2)" rx="4"/>
+      </svg>
+      <span class="preview-label">Light</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- VARIANT 10: Monogram Crest -->
+<!-- ============================================================ -->
+<div class="variant">
+  <div class="variant-header">
+    <span class="variant-num">10</span>
+    <span class="variant-title">Monogram Crest</span>
+  </div>
+  <p class="variant-desc">A shield-form crest housing the EGPS monogram — heritage meets modernity. Inspired by maritime crests and Dubai luxury brands, with a structured internal layout and gold accent line.</p>
+  <div class="previews">
+    <div class="preview dark">
+      <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="crestgold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e8d89c"/>
+            <stop offset="100%" stop-color="#a07830"/>
+          </linearGradient>
+          <clipPath id="shieldclip">
+            <path d="M150,8 L240,25 L240,75 C240,110 150,135 150,135 C150,135 60,110 60,75 L60,25 Z"/>
+          </clipPath>
+        </defs>
+        <!-- Shield outline -->
+        <path d="M150,8 L240,25 L240,75 C240,110 150,135 150,135 C150,135 60,110 60,75 L60,25 Z" fill="none" stroke="url(#crestgold)" stroke-width="2"/>
+        <!-- Inner shield -->
+        <path d="M150,16 L230,30 L230,73 C230,104 150,127 150,127 C150,127 70,104 70,73 L70,30 Z" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/>
+        <!-- Horizontal divider -->
+        <line x1="80" y1="72" x2="220" y2="72" stroke="#c9a84c" stroke-width="0.5" opacity="0.5"/>
+        <!-- EGPS monogram top -->
+        <text x="150" y="62" text-anchor="middle" font-family="'Playfair Display',serif" font-size="30" font-weight="700" fill="white" letter-spacing="4">EGPS</text>
+        <!-- Subtitle below divider -->
+        <text x="150" y="88" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="5.5" fill="#c9a84c" letter-spacing="4" opacity="0.8">EUROGULF POWER</text>
+        <text x="150" y="98" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="5.5" fill="#c9a84c" letter-spacing="4" opacity="0.8">SOLUTIONS</text>
+        <!-- Small star accent -->
+        <polygon points="150,108 152,114 158,114 153,118 155,124 150,120 145,124 147,118 142,114 148,114" fill="#c9a84c" opacity="0.5" transform="scale(0.6) translate(100,70)"/>
+      </svg>
+      <span class="preview-label">Dark</span>
+    </div>
+    <div class="preview light">
+      <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="crestgold2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#8a7234"/>
+            <stop offset="100%" stop-color="#5a4820"/>
+          </linearGradient>
+        </defs>
+        <path d="M150,8 L240,25 L240,75 C240,110 150,135 150,135 C150,135 60,110 60,75 L60,25 Z" fill="none" stroke="url(#crestgold2)" stroke-width="2"/>
+        <path d="M150,16 L230,30 L230,73 C230,104 150,127 150,127 C150,127 70,104 70,73 L70,30 Z" fill="none" stroke="#8a7234" stroke-width="0.5" opacity="0.3"/>
+        <line x1="80" y1="72" x2="220" y2="72" stroke="#8a7234" stroke-width="0.5" opacity="0.5"/>
+        <text x="150" y="62" text-anchor="middle" font-family="'Playfair Display',serif" font-size="30" font-weight="700" fill="#0c1a2e" letter-spacing="4">EGPS</text>
+        <text x="150" y="88" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="5.5" fill="#6b5620" letter-spacing="4" opacity="0.8">EUROGULF POWER</text>
+        <text x="150" y="98" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="5.5" fill="#6b5620" letter-spacing="4" opacity="0.8">SOLUTIONS</text>
+        <polygon points="150,108 152,114 158,114 153,118 155,124 150,120 145,124 147,118 142,114 148,114" fill="#8a7234" opacity="0.5" transform="scale(0.6) translate(100,70)"/>
+      </svg>
+      <span class="preview-label">Light</span>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  EGPS &middot; Batch 1 &middot; Variants 01–10 &middot; Confidential
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EGPS Logo Exploration — 20 Variants</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0f1a;color:#e8e0d4;font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
+header{text-align:center;padding:60px 20px 40px;border-bottom:1px solid rgba(212,175,55,.2)}
+h1{font-size:2.5rem;letter-spacing:.15em;text-transform:uppercase;color:#d4af37;margin-bottom:8px}
+.sub{font-size:1rem;letter-spacing:.3em;text-transform:uppercase;color:#8a9ab5;font-weight:300}
+nav{display:flex;justify-content:center;gap:20px;padding:30px 20px;position:sticky;top:0;background:#0a0f1a;z-index:10;border-bottom:1px solid rgba(255,255,255,.05)}
+nav a{color:#8a9ab5;text-decoration:none;font-size:.9rem;letter-spacing:.1em;padding:8px 20px;border:1px solid rgba(138,154,181,.3);border-radius:4px;transition:all .3s}
+nav a:hover,nav a.active{color:#d4af37;border-color:#d4af37}
+section{padding:20px}
+iframe{width:100%;border:none;min-height:100vh}
+.batch-title{text-align:center;padding:40px 20px 10px;font-size:1.2rem;letter-spacing:.2em;color:#d4af37;text-transform:uppercase}
+</style>
+</head>
+<body>
+<header>
+<h1>EGPS Logo Exploration</h1>
+<div class="sub">Eurogulf Power Solutions • A BSS Subsidiary • 20 Variants</div>
+</header>
+<nav>
+<a href="#batch1" class="active">Variants 1–10</a>
+<a href="#batch2">Variants 11–20</a>
+</nav>
+<div class="batch-title" id="batch1">Variants 1–10: Core Directions</div>
+<section><iframe src="batch1.html" onload="this.style.height=this.contentDocument.body.scrollHeight+'px'"></iframe></section>
+<div class="batch-title" id="batch2">Variants 11–20: Creative Explorations</div>
+<section><iframe src="batch2.html" onload="this.style.height=this.contentDocument.body.scrollHeight+'px'"></iframe></section>
+</body>
+</html>
