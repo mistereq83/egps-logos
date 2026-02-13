@@ -42,12 +42,13 @@ header,.batch-header,.frame-wrap{animation:fadeUp .8s ease both}
 <header>
 <div class="eyebrow">Eurogulf Power Solutions</div>
 <h1>EGPS — Logo <em>Exploration</em></h1>
-<div class="subtitle">Prepared for BSS · 20 Variants · 2026</div>
+<div class="subtitle">Prepared for BSS · 30 Variants · 2026</div>
 </header>
 
 <nav>
 <a href="#batch1" class="active" onclick="document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));this.classList.add('active')">Variants 1–10</a>
 <a href="#batch2" onclick="document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));this.classList.add('active')">Variants 11–20</a>
+<a href="#batch3" onclick="document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));this.classList.add('active')" style="color:var(--gold);border-color:var(--gold)">BSS Connection 21–30</a>
 </nav>
 
 <div id="batch1">
@@ -70,6 +71,16 @@ header,.batch-header,.frame-wrap{animation:fadeUp .8s ease both}
 </div>
 </div>
 
+<div id="batch3">
+<div class="batch-header">
+<h2>BSS Connection</h2>
+<p>Variants 21–30 · Parent Brand Integration</p>
+</div>
+<div class="frame-wrap">
+<iframe src="batch3.html" id="frame3" scrolling="no"></iframe>
+</div>
+</div>
+
 <footer>Confidential · Prepared by Molab · 2026</footer>
 
 <script>
@@ -81,9 +92,11 @@ function resizeFrame(frame){
 }
 document.getElementById('frame1').onload=function(){resizeFrame(this)};
 document.getElementById('frame2').onload=function(){resizeFrame(this)};
+document.getElementById('frame3').onload=function(){resizeFrame(this)};
 window.addEventListener('resize',()=>{
   resizeFrame(document.getElementById('frame1'));
   resizeFrame(document.getElementById('frame2'));
+  resizeFrame(document.getElementById('frame3'));
 });
 </script>
 </body>
