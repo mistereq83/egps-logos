@@ -3,33 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EGPS Logo Exploration — 20 Variants</title>
+<title>EGPS — Logo Exploration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0f1a;color:#e8e0d4;font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
-header{text-align:center;padding:60px 20px 40px;border-bottom:1px solid rgba(212,175,55,.2)}
-h1{font-size:2.5rem;letter-spacing:.15em;text-transform:uppercase;color:#d4af37;margin-bottom:8px}
-.sub{font-size:1rem;letter-spacing:.3em;text-transform:uppercase;color:#8a9ab5;font-weight:300}
-nav{display:flex;justify-content:center;gap:20px;padding:30px 20px;position:sticky;top:0;background:#0a0f1a;z-index:10;border-bottom:1px solid rgba(255,255,255,.05)}
-nav a{color:#8a9ab5;text-decoration:none;font-size:.9rem;letter-spacing:.1em;padding:8px 20px;border:1px solid rgba(138,154,181,.3);border-radius:4px;transition:all .3s}
-nav a:hover,nav a.active{color:#d4af37;border-color:#d4af37}
-section{padding:20px}
-iframe{width:100%;border:none;min-height:100vh}
-.batch-title{text-align:center;padding:40px 20px 10px;font-size:1.2rem;letter-spacing:.2em;color:#d4af37;text-transform:uppercase}
+:root{--navy:#0a0f1a;--navy-light:#111827;--gold:#d4af37;--gold-dim:rgba(212,175,55,.15);--cream:#e8e0d4;--slate:#8a9ab5;--card-bg:#141c2b}
+body{background:var(--navy);color:var(--cream);font-family:'Space Grotesk',system-ui,sans-serif;min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+
+header{text-align:center;padding:80px 20px 50px;position:relative}
+header::after{content:'';display:block;width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:30px auto 0}
+.eyebrow{font-size:.75rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:300}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:400;letter-spacing:.02em;color:var(--cream)}
+h1 em{font-style:italic;color:var(--gold)}
+.subtitle{font-size:.9rem;letter-spacing:.25em;text-transform:uppercase;color:var(--slate);margin-top:12px;font-weight:300}
+
+nav{display:flex;justify-content:center;gap:16px;padding:20px;position:sticky;top:0;background:rgba(10,15,26,.95);backdrop-filter:blur(12px);z-index:100;border-bottom:1px solid rgba(212,175,55,.08)}
+nav a{color:var(--slate);text-decoration:none;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;padding:10px 24px;border:1px solid rgba(138,154,181,.2);border-radius:2px;transition:all .3s ease;font-weight:500}
+nav a:hover,nav a.active{color:var(--gold);border-color:var(--gold);background:var(--gold-dim)}
+
+.batch-header{text-align:center;padding:60px 20px 20px}
+.batch-header h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:var(--cream)}
+.batch-header p{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--slate);margin-top:8px}
+.batch-header::before{content:'';display:block;width:40px;height:1px;background:var(--gold);margin:0 auto 20px}
+
+.frame-wrap{padding:0 20px 60px;max-width:1400px;margin:0 auto}
+iframe{width:100%;border:none;background:var(--navy-light);border-radius:4px;overflow:hidden;min-height:200px}
+
+footer{text-align:center;padding:60px 20px;border-top:1px solid rgba(212,175,55,.08);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--slate)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+header,.batch-header,.frame-wrap{animation:fadeUp .8s ease both}
+.batch-header:nth-of-type(2),.frame-wrap:nth-of-type(2){animation-delay:.15s}
 </style>
 </head>
 <body>
 <header>
-<h1>EGPS Logo Exploration</h1>
-<div class="sub">Eurogulf Power Solutions • A BSS Subsidiary • 20 Variants</div>
+<div class="eyebrow">Eurogulf Power Solutions</div>
+<h1>EGPS — Logo <em>Exploration</em></h1>
+<div class="subtitle">Prepared for BSS · 20 Variants · 2026</div>
 </header>
+
 <nav>
-<a href="#batch1" class="active">Variants 1–10</a>
-<a href="#batch2">Variants 11–20</a>
+<a href="#batch1" class="active" onclick="document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));this.classList.add('active')">Variants 1–10</a>
+<a href="#batch2" onclick="document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));this.classList.add('active')">Variants 11–20</a>
 </nav>
-<div class="batch-title" id="batch1">Variants 1–10: Core Directions</div>
-<section><iframe src="batch1.html" onload="this.style.height=this.contentDocument.body.scrollHeight+'px'"></iframe></section>
-<div class="batch-title" id="batch2">Variants 11–20: Creative Explorations</div>
-<section><iframe src="batch2.html" onload="this.style.height=this.contentDocument.body.scrollHeight+'px'"></iframe></section>
+
+<div id="batch1">
+<div class="batch-header">
+<h2>Core Directions</h2>
+<p>Variants 01–10 · Typographic & Iconographic</p>
+</div>
+<div class="frame-wrap">
+<iframe src="batch1.html" id="frame1" scrolling="no"></iframe>
+</div>
+</div>
+
+<div id="batch2">
+<div class="batch-header">
+<h2>Creative Explorations</h2>
+<p>Variants 11–20 · Experimental & Bold</p>
+</div>
+<div class="frame-wrap">
+<iframe src="batch2.html" id="frame2" scrolling="no"></iframe>
+</div>
+</div>
+
+<footer>Confidential · Prepared by Molab · 2026</footer>
+
+<script>
+function resizeFrame(frame){
+  try{
+    const h=frame.contentDocument.body.scrollHeight;
+    if(h>100)frame.style.height=h+'px';
+  }catch(e){}
+}
+document.getElementById('frame1').onload=function(){resizeFrame(this)};
+document.getElementById('frame2').onload=function(){resizeFrame(this)};
+window.addEventListener('resize',()=>{
+  resizeFrame(document.getElementById('frame1'));
+  resizeFrame(document.getElementById('frame2'));
+});
+</script>
 </body>
 </html>
